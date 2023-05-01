@@ -140,28 +140,27 @@ li a {
 }
 
 .text h1 {
-  font-size: 40pt;
+  font-size: 35pt;
   letter-spacing: 2px;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
-
-.text h2{
-  margin-top: 100px;
+.text h2 {
+  margin-top: 80px;
   letter-spacing: 1px;
   font-size: 15pt;
   border: 1px dashed #737272;
   border-radius: 20px;
   padding: 10px;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 .container .text {
   color: #fff;
   display: flex;
   flex-direction: column;
-  padding-top: 15%;
-  margin-left: 80px;
+  padding-top: 10%;
+  margin-left: 30px;
 }
 
 .hidden {
@@ -176,7 +175,7 @@ li a {
 
 .tripulacao img {
   border-radius: 20%;
-  box-shadow: 15px 20px 20px #353535;
+  box-shadow: 15px 15px 20px #161616;
   height: 60vh;
   width: 45vw;
   margin-top: 5%;
@@ -196,8 +195,9 @@ li a {
   display: flex;
   height: fit-content;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  margin-left: 20px;
 }
 
 .tripulantes .luffy img {
@@ -206,14 +206,31 @@ li a {
   cursor: pointer;
 }
 
+.plus:hover {
+  background-color: #000000;
+}
+
+.plus:hover span {
+  display: none;
+}
+
+.plus:hover .hidden {
+  height: 150px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
 .tripulantes .zoro img {
   height: 145px;
   width: 150px;
+  cursor: pointer;
 }
 
-.tripulantes .sanji img{
+.tripulantes .sanji img {
   height: 145px;
   width: 150px;
+  cursor: pointer;
 }
 .tripulantes .jimbei img {
   height: 145px;
@@ -309,10 +326,8 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 145px;
+  height: 140px;
   width: 150px;
   background: #3f97fc;
   cursor: pointer;
 }
-
-
