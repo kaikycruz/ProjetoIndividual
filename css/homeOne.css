@@ -191,9 +191,8 @@ li a {
 }
 
 .tripulantes {
-  width: 100%;
+  width: 90%;
   display: flex;
-  height: fit-content;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -206,17 +205,12 @@ li a {
   cursor: pointer;
 }
 
-.plus:hover {
-  background-color: #000000;
-}
-
 .plus:hover span {
   display: none;
 }
 
 .plus:hover .hidden {
   height: 150px;
-  align-items: center;
   display: flex;
   width: 100%;
 }
@@ -269,53 +263,53 @@ li a {
 }
 
 .tripulantes .luffy img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .zoro img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .sanji img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .chopper img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .jimbei img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .brook img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .franky img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .robin img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .nami img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 .tripulantes .usopp img:hover {
-  height: 160px;
-  width: 165px;
+  height: 150px;
+  width: 155px;
   transition: 0.9s;
 }
 
@@ -326,8 +320,8 @@ li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 140px;
-  width: 150px;
+  height: 130px;
+  width: 140px;
   background: #3f97fc;
   cursor: pointer;
 }

@@ -118,12 +118,14 @@ li a {
 }
 
 .text h1 {
+  color: #3c82fb;
   font-size: 40pt;
   letter-spacing: 2px;
   font-family: "Permanent Marker", cursive;
 }
 
 .text h4 {
+  color: #3c82fb;
   font-size: 15pt;
   font-family: "Permanent Marker", cursive;
   margin-bottom: 40px;
@@ -155,6 +157,8 @@ li a {
 }
 
 .luffy img {
+  border-radius: 15%;
+  margin-right: 30px;
   width: 40vw;
   height: 45vh;
 }
