@@ -6,19 +6,24 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: #49586c;
   font-family: "Poppins", sans-serif;
 }
 
 nav ul {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1%;
+  position: fixed;
+  background-color: #4783d3;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navegation {
@@ -28,6 +33,12 @@ nav ul {
   letter-spacing: 3px;
   font-size: 14pt;
 }
+
+.active{
+  color: #ffffff;
+  border-bottom: 1px solid #d0d0d1;
+}
+
 
 .in-up {
   color: #000000;
@@ -39,7 +50,7 @@ nav ul {
 
 .navegation a:hover {
   color: #ffffff;
-  border-bottom: 1px solid #d0d0d1;
+  border-bottom: 1px solid #cecece;
   font-size: 14pt;
   transition: 0.6s;
 }
@@ -67,10 +78,6 @@ nav ul {
   transition: 0.6s;
 }
 
-.active {
-  color: #ffffff;
-  border-bottom: 1px solid #d0d0d1;
-}
 
 .cadastro {
   display: flex;
@@ -78,7 +85,7 @@ nav ul {
   justify-content: center;
   width: 9vw;
   margin-left: 30px;
-  background-color: #bdbdbd;
+  background-color: #e0e0e0;
   padding: 10px;
   border: none;
   border-radius: 12px;
@@ -100,7 +107,7 @@ nav ul {
 
 li a {
   font-size: 13pt;
-  color: #989fa5;
+  color: #c2c6ca;
   font-weight: 500;
   border-bottom: 2px solid transparent;
 }
@@ -112,7 +119,7 @@ li a {
   display: none;
 }
 
-.tripulantes {
+/*.tripulantes {
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -246,22 +253,24 @@ li a {
   width: 140px;
   background: #3f97fc;
   cursor: pointer;
-}
+}*/
 
 section {
   min-height: 100vh;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .text span {
   font-size: 15pt;
-  color: #babcbe;
+  color: #000000;
   margin-top: 25px;
   margin-bottom: 25px;
   letter-spacing: 1px;
+  font-weight: 500;
 }
 
 .titleLuffy {
-  color: #3c82fb;
+  color: #ffffff;
   font-size: 40pt;
   letter-spacing: 2px;
   margin-top: 80px;
@@ -269,23 +278,20 @@ section {
 }
 
 .subTitleLuffy {
-  color: #3c82fb;
-  font-size: 15pt;
+  color: #ffffff;
+  font-size: 21pt;
   font-family: "Permanent Marker", cursive;
   margin-bottom: 40px;
   margin-left: 10%;
 }
 
-.subTitleLuffy:hover {
-  font-size: 16pt;
-  transition: 0.5s;
-}
 
 .luffyimg img {
   border-radius: 15%;
-  width: 35vw;
+  width: 40vw;
   height: 45vh;
   margin-right: 20px;
+  box-shadow: 10px 7px 10px #4c2a2a;
 }
 
 .text {
@@ -299,7 +305,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
+  background: radial-gradient(rgb(252, 77, 77) ,rgb(249, 71, 71), rgb(255, 65, 65), rgb(246, 73, 73), rgb(255, 55, 55));
 }
 
 .text img {
@@ -307,10 +313,64 @@ section {
   width: 12vw;
 }
 
+.titleZoro {
+  color: #2fcd39;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleZoro {
+  color: #2fcd39;
+    font-size: 21pt;
+    font-family: "Permanent Marker", cursive;
+    margin-bottom: 40px;
+    margin-left: 10%;
+}
+
+.historiaZoro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b271ef;
+}
+
+.zoroimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #4c2a2a;
+}
+
+.titleSanji {
+  color: #50b8fd;
+    font-size: 40pt;
+    letter-spacing: 2px;
+    font-family: "Permanent Marker", cursive;
+}
+
+.subtitleSanji {
+  color: #50b8fd;
+    font-size: 21pt;
+    font-family: "Permanent Marker", cursive;
+    margin-bottom: 40px;
+    margin-left: 10%;
+}
+
+.historiaSanji {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fcf287;
+}
+
 .sanjiimg img {
   border-radius: 15%;
-  width: 35vw;
+  width: 40vw;
   height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #4c2a2a;
 }
 
 .tripulantes a {
@@ -327,13 +387,22 @@ section {
 
 .dropdown-content {
   display: none;
-  background-color: #f9f9f9;
+  position: absolute;
+  background-color: #f0eeee;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
-  z-index: 2;
+  z-index: 1;
 }
 
-.dropdown:hover > .dropdown-content {
-  display: flex;
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  color: #000000;
+}
+
+.dropdown-content a {
+  color: #000000;
 }
