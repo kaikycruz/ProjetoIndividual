@@ -265,7 +265,6 @@ section {
   background: radial-gradient(#e64c4c, #f54545, #f83838, #eb2828, #be1b1b);
 }
 
-
 .titleZoro {
   color: #2fcd39;
   font-size: 40pt;
@@ -352,7 +351,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(#f7a24e, #faa44d, #fa9c3f,#ff9b37, #ff8e1c);
+  background: radial-gradient(#f7a24e, #faa44d, #fa9c3f, #ff9b37, #ff8e1c);
 }
 
 .titleNami {
@@ -382,7 +381,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(#52d9ff, #46d7ff, #35d3ff,#25caf8, #0dc5f8);
+  background: radial-gradient(#52d9ff, #46d7ff, #35d3ff, #25caf8, #0dc5f8);
 }
 
 .titleChopper {
@@ -412,7 +411,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(#cf6ef0, #d16af4, #cb5cf0,#c65bea, #c74ef0);
+  background: radial-gradient(#cf6ef0, #d16af4, #cb5cf0, #c65bea, #c74ef0);
 }
 
 .titleRobin {
@@ -423,7 +422,7 @@ section {
 }
 
 .subtitleRobin {
-  color:#fac2fc ;
+  color: #fac2fc;
   font-size: 21pt;
   font-family: "Permanent Marker", cursive;
   margin-bottom: 40px;
@@ -442,7 +441,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(#e6c149, #e4bb35, #e7bc2f,#e0b424, #e6b40f);
+  background: radial-gradient(#e6c149, #e4bb35, #e7bc2f, #e0b424, #e6b40f);
 }
 
 .titleUsopp {
@@ -472,7 +471,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(#e43e3e, #e33333, #e12b2b,#e02323, #e60f0f);
+  background: radial-gradient(#e43e3e, #e33333, #e12b2b, #e02323, #e60f0f);
 }
 
 .titleFranky {
