@@ -167,6 +167,51 @@ section {
   font-weight: 500;
 }
 
+.text-nami span {
+  font-size: 14pt;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-chopper span {
+  font-size: 14pt;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-robin span {
+  font-size: 14pt;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-usopp span {
+  font-size: 14pt;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-franky span {
+  font-size: 14pt;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
 .titleLuffy {
   color: #ffe77e;
   font-size: 40pt;
@@ -203,7 +248,12 @@ section {
 .text-zoro,
 .text-sanji,
 .text-jimbei,
-.text-brook {
+.text-brook,
+.text-nami,
+.text-chopper,
+.text-robin,
+.text-usopp,
+.text-franky {
   margin-left: 30px;
   width: 50%;
 }
@@ -215,10 +265,6 @@ section {
   background: radial-gradient(#e64c4c, #f54545, #f83838, #eb2828, #be1b1b);
 }
 
-.text img {
-  margin-left: 25%;
-  width: 12vw;
-}
 
 .titleZoro {
   color: #2fcd39;
@@ -300,6 +346,156 @@ section {
   height: 45vh;
   margin-right: 20px;
   box-shadow: 10px 7px 10px #13131b;
+}
+
+.historiaNami {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#f7a24e, #faa44d, #fa9c3f,#ff9b37, #ff8e1c);
+}
+
+.titleNami {
+  color: #4396cd;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleNami {
+  color: #4396cd;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.namiimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #282839;
+}
+
+.historiaChopper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#52d9ff, #46d7ff, #35d3ff,#25caf8, #0dc5f8);
+}
+
+.titleChopper {
+  color: #cf64d3;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleChopper {
+  color: #cf64d3;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.chopperimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #282839;
+}
+
+.historiaRobin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#cf6ef0, #d16af4, #cb5cf0,#c65bea, #c74ef0);
+}
+
+.titleRobin {
+  color: #f6bcf8;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleRobin {
+  color:#fac2fc ;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.robinimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #282839;
+}
+
+.historiaUsopp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#e6c149, #e4bb35, #e7bc2f,#e0b424, #e6b40f);
+}
+
+.titleUsopp {
+  color: #714a07;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleUsopp {
+  color: #714a07;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.usoppimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #282839;
+}
+
+.historiaFranky {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#e43e3e, #e33333, #e12b2b,#e02323, #e60f0f);
+}
+
+.titleFranky {
+  color: #64a9ed;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleFranky {
+  color: #f6d644;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.frankyimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #282839;
 }
 
 .titleSanji {
