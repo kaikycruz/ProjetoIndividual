@@ -34,11 +34,10 @@ nav ul {
   font-size: 14pt;
 }
 
-.active{
+.active {
   color: #ffffff;
   border-bottom: 1px solid #d0d0d1;
 }
-
 
 .in-up {
   color: #000000;
@@ -77,7 +76,6 @@ nav ul {
   border-bottom: 1px solid #cccccc;
   transition: 0.6s;
 }
-
 
 .cadastro {
   display: flex;
@@ -119,149 +117,31 @@ li a {
   display: none;
 }
 
-/*.tripulantes {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 20px;
-}
-
-.tripulantes .luffy img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.plus:hover span {
-  display: none;
-}
-
-.plus:hover .hidden {
-  height: 150px;
-  display: flex;
-  width: 100%;
-}
-
-.tripulantes .zoro img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.tripulantes .sanji img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .jimbei img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .brook img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .franky img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .robin img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .nami img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .usopp img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .chopper img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.tripulantes .luffy img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .zoro img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .sanji img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .chopper img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .jimbei img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .brook img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .franky img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .robin img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .nami img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .usopp img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-
-.tripulantes .plus {
-  color: #fff;
-  font-weight: 800;
-  font-size: 25pt;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 130px;
-  width: 140px;
-  background: #3f97fc;
-  cursor: pointer;
-}*/
-
 section {
   min-height: 100vh;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.text span {
-  font-size: 15pt;
+.text-luffy span {
+  font-size: 14pt;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-zoro span {
+  font-size: 14pt;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-sanji span {
+  font-size: 14pt;
   color: #000000;
   margin-top: 25px;
   margin-bottom: 25px;
@@ -269,8 +149,26 @@ section {
   font-weight: 500;
 }
 
-.titleLuffy {
+.text-jimbei span {
+  font-size: 14pt;
+  color: #000000;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.text-brook span {
+  font-size: 14pt;
   color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.titleLuffy {
+  color: #ffe77e;
   font-size: 40pt;
   letter-spacing: 2px;
   margin-top: 80px;
@@ -278,13 +176,12 @@ section {
 }
 
 .subTitleLuffy {
-  color: #ffffff;
+  color: #ffe77e;
   font-size: 21pt;
   font-family: "Permanent Marker", cursive;
   margin-bottom: 40px;
   margin-left: 10%;
 }
-
 
 .luffyimg img {
   border-radius: 15%;
@@ -294,18 +191,28 @@ section {
   box-shadow: 10px 7px 10px #4c2a2a;
 }
 
-.text {
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  margin-left: 50px;
+.jimbeiimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #2a2c4c;
+}
+
+.text-luffy,
+.text-zoro,
+.text-sanji,
+.text-jimbei,
+.text-brook {
+  margin-left: 30px;
+  width: 50%;
 }
 
 .historiaLuffy {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: radial-gradient(rgb(252, 77, 77) ,rgb(249, 71, 71), rgb(255, 65, 65), rgb(246, 73, 73), rgb(255, 55, 55));
+  background: radial-gradient(#e64c4c, #f54545, #f83838, #eb2828, #be1b1b);
 }
 
 .text img {
@@ -322,17 +229,39 @@ section {
 
 .subtitleZoro {
   color: #2fcd39;
-    font-size: 21pt;
-    font-family: "Permanent Marker", cursive;
-    margin-bottom: 40px;
-    margin-left: 10%;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
 }
 
 .historiaZoro {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #b271ef;
+  background: radial-gradient(#a56dda, #a658f0, #9440e4, #8626e0, #7715d3);
+}
+
+.historiaJimbei {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#568bfd, #5289ff, #4680ff, #3272fd, #1e5fec);
+}
+
+.titleJimbei {
+  color: #000000;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.subtitleJimbei {
+  color: #000000;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
 }
 
 .zoroimg img {
@@ -343,26 +272,56 @@ section {
   box-shadow: 10px 7px 10px #4c2a2a;
 }
 
+.titleBrook {
+  color: #fafafa;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
+}
+
+.historiaBrook {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(#202020, #181818, #131313, #0f0f0f, #000000);
+}
+
+.subtitleBrook {
+  color: #ffffff;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
+}
+
+.brookimg img {
+  border-radius: 15%;
+  width: 40vw;
+  height: 45vh;
+  margin-right: 20px;
+  box-shadow: 10px 7px 10px #13131b;
+}
+
 .titleSanji {
   color: #50b8fd;
-    font-size: 40pt;
-    letter-spacing: 2px;
-    font-family: "Permanent Marker", cursive;
+  font-size: 40pt;
+  letter-spacing: 2px;
+  font-family: "Permanent Marker", cursive;
 }
 
 .subtitleSanji {
   color: #50b8fd;
-    font-size: 21pt;
-    font-family: "Permanent Marker", cursive;
-    margin-bottom: 40px;
-    margin-left: 10%;
+  font-size: 21pt;
+  font-family: "Permanent Marker", cursive;
+  margin-bottom: 40px;
+  margin-left: 10%;
 }
 
 .historiaSanji {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fcf287;
+  background: radial-gradient(#fff046, #fff154, #ffef45, #fded37, #fff04e);
 }
 
 .sanjiimg img {

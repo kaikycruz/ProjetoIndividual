@@ -116,7 +116,7 @@ li a {
 }
 
 .text button a {
-  font-size: 11pt;
+  font-size: 10pt;
   text-decoration: none;
   color: #fff;
 }
@@ -140,7 +140,7 @@ li a {
 }
 
 .text h1 {
-  color: #8eaeff;
+  color: #c3d4ff;
   font-size: 35pt;
   letter-spacing: 2px;
   font-family: "Permanent Marker", cursive;
@@ -156,7 +156,7 @@ li a {
   font-family: "Permanent Marker", cursive;
 }
 
-.container .text {
+.intro .text {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -168,161 +168,38 @@ li a {
   display: none;
 }*/
 
-.tripulacao img:hover {
-  height: 61vh;
-  width: 46vw;
-  transition: 1s;
-}
-
 .tripulacao img {
   border-radius: 20%;
-  box-shadow: 15px 15px 20px #161616;
+  box-shadow: 10px 9px 10px #2e2e2e;
   height: 60vh;
   width: 45vw;
   margin-top: 5%;
 }
 
-.container {
+.intro {
   display: flex;
-  height: 75vh;
+  height: 100vh;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 5%;
   padding-right: 5%;
 }
 
-/*.tripulantes {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 20px;
+.carrossel {
+  background: #000;
+  height: 100vh;
 }
 
-.tripulantes .luffy img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.plus:hover span {
-  display: none;
-}
-
-.plus:hover .hidden {
-  height: 150px;
-  display: flex;
-  width: 100%;
-}
-
-.tripulantes .zoro img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.tripulantes .sanji img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .jimbei img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .brook img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .franky img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .robin img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .nami img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .usopp img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-.tripulantes .chopper img {
-  height: 145px;
-  width: 150px;
-  cursor: pointer;
-}
-
-.tripulantes .luffy img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .zoro img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .sanji img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .chopper img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .jimbei img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .brook img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .franky img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .robin img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .nami img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-.tripulantes .usopp img:hover {
-  height: 150px;
-  width: 155px;
-  transition: 0.9s;
-}
-
-.tripulantes .plus {
-  color: #fff;
-  font-weight: 800;
-  font-size: 25pt;
+.geralImgs {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 130px;
-  width: 140px;
-  background: #3f97fc;
-  cursor: pointer;
-}*/
+}
+
+#carrossel #carrossel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
