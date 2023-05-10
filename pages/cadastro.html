@@ -6,31 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - One Piece</title>
     <link rel="stylesheet" href="../css/cadastro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <div class="container">
-      <div class="img"></div>
-      <div class="form">
-        <form>
-          <div class="inputs">
-            <input type="text" placeholder="Nome Completo" id="input_nome" />
-            <input type="text" placeholder="Email" id="input_Email" />
-            <input type="text" placeholder="UF" id="input_estado" />
-            <input type="number" placeholder="Idade" id="input_idade" />
-            <input
-              type="text"
-              placeholder="Quantos Eps ja assistiu"
-              id="input_eps"
-            />
-            <input type="password" placeholder="Senha" id="senha" />
-            <input
-              type="password"
-              placeholder="Confirme sua senha"
-              id="senha"
-            />
+    <header>
+      <nav>
+        <ul class="nav">
+          <div class="navegation">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="#">Arcos</a></li>
+            <li><a href="#">Sobre Mim</a></li>
           </div>
-          <button>Cadastrar</button>
-        </form>
+          <div class="in-up">
+            <li class="entrar">
+              <i class="fa-solid fa-right-to-bracket fa-xs"></i>
+              <a href="#">Entrar</a>
+            </li>
+            <li class="cadastro">
+              <i class="fa-solid fa-user-plus fa-xs"></i
+              ><a href="../pages/cadastro.html">Cadastrar</a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="img">
+        <img src="../images/gifCadastro.gif" alt="" />
+      </div>
+      <div class="form-container">
+        <div class="login-cadastro">
+          <form class="cadastro-form">
+            <h2 class="tituloCadastro">Cadastre-se</h2>
+            <div class="campoInput input">
+              <i class="fa-solid fa-user"></i>
+              <input id="input_user" type="text" placeholder="Nome Usuário" />
+            </div>
+            <div class="campoInput input">
+              <i class="fa-solid fa-envelope"></i>
+              <input id="input_email" type="text" placeholder="Email" />
+            </div>
+            <div class="campoInput input">
+              <i class="fa-solid fa-flag"></i>
+              <input id="input_Uf" type="text" placeholder="UF" />
+            </div>
+            <div class="campoInput input">
+              <i class="fa-sharp fa-solid fa-calendar-days"></i>
+              <input id="input_idade" type="text" placeholder="Idade" />
+            </div>
+            <div class="campoInput input">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                id="input_Senha"
+                type="password"
+                placeholder="Digite uma senha"
+              />
+            </div>
+            <div class="campoInput">
+              <div class="menuEps verOpcoes">
+                <div class="btn-select">
+                  <span class="selectEps">Episodios assistidos</span>
+                  <i class="fa-solid fa-caret-left fa-rotate-270"></i>
+                </div>
+
+                <ul class="opcoes">
+                  <li class="opcao">
+                    <span class="opcaoTxt">Menos de 100 eps</span>
+                  </li>
+                  <li class="opcao">
+                    <span class="opcaoTxt">quase 400 eps</span>
+                  </li>
+                  <li class="opcao">
+                    <span class="opcaoTxt">quase 600 eps</span>
+                  </li>
+                  <li class="opcao">
+                    <span class="opcaoTxt">quase 900 eps</span>
+                  </li>
+                  <li class="opcao">
+                    <span class="opcaoTxt">ja estou nos semanais!</span>
+                  </li>
+                  <li class="opcao">
+                    <span class="opcaoTxt">ja estou no Manga!</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </body>
