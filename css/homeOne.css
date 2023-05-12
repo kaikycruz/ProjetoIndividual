@@ -205,6 +205,7 @@ li a {
 }
 
 .termos img {
+  border-radius: 15px;
   display: none;
   width: 900px;
   height: 500px;

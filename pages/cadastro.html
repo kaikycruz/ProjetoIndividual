@@ -24,25 +24,22 @@
             <li><a href="#">Arcos</a></li>
             <li><a href="#">Sobre Mim</a></li>
           </div>
-          <div class="in-up">
-            <li class="entrar">
-              <i class="fa-solid fa-right-to-bracket fa-xs"></i>
-              <a href="#">Entrar</a>
-            </li>
-            <li class="cadastro">
-              <i class="fa-solid fa-user-plus fa-xs"></i
-              ><a href="../pages/cadastro.html">Cadastrar</a>
-            </li>
-          </div>
         </ul>
       </nav>
     </header>
     <div class="main">
       <div class="container">
+        <div class="infos">
+          <div class="jaCadastrado">
+            <h2>Ja possui um <br />registro?</h2>
+            <span>clique no botao a baixo e faca seu login</span>
+            <button onclick="logar()">login</button>
+          </div>
+        </div>
         <div class="form-container">
           <div class="login-cadastro">
             <form class="cadastro-form">
-              <h2 class="tituloCadastro">Cadastre-se</h2>
+              <h2 class="tituloCadastro">Cadastro</h2>
               <div class="campoInput input">
                 <i class="fa-solid fa-user"></i>
                 <input id="input_user" type="text" placeholder="Nome Usuário" />
@@ -57,7 +54,7 @@
               </div>
               <div class="campoInput input">
                 <i class="fa-sharp fa-solid fa-calendar-days"></i>
-                <input id="input_idade" type="text" placeholder="Idade" />
+                <input id="input_idade" type="date" placeholder="Idade" />
               </div>
               <div class="campoInput input">
                 <i class="fa-solid fa-lock"></i>
@@ -67,47 +64,49 @@
                   placeholder="Digite uma senha"
                 />
               </div>
-              <button class="btnCadastrar">Cadastrar</button>
-            </form>
-          </div>
-          <div class="divisoria"></div>
-          <div class="options">
-            <div class="campoInput">
-              <div class="menuEps verOpcoes">
-                <div class="btn-select">
-                  <span class="selectEps">Episodios assistidos</span>
-                  <i class="fa-solid fa-caret-left fa-rotate-270"></i>
+              <div class="options">
+                <div class="campoInput">
+                  <div class="menuEps">
+                    <select class="verOpcoes">
+                      <option value="Eps">Episodios Assistidos</option>
+                      <option value="200" class="opcao">
+                        Menos de 200 eps
+                      </option>
+                      <option value="500">quase 500 eps</option>
+                      <option value="800">quase 800 eps</option>
+                      <option value="SemanaisA">ja estou nos semanais!</option>
+                      <option value="SemanaisM">ja estou no Manga!</option>
+                    </select>
+                  </div>
                 </div>
 
-                <ul class="opcoes">
-                  <li class="opcao">
-                    <span class="opcaoTxt">Menos de 200 eps</span>
-                  </li>
-                  <li class="opcao">
-                    <span class="opcaoTxt">quase 500 eps</span>
-                  </li>
-                  <li class="opcao">
-                    <span class="opcaoTxt">quase 800 eps</span>
-                  </li>
-                  <li class="opcao">
-                    <span class="opcaoTxt">ja estou nos semanais!</span>
-                  </li>
-                  <li class="opcao">
-                    <span class="opcaoTxt">ja estou no Manga!</span>
-                  </li>
-                </ul>
+                <div class="campoInput">
+                  <div class="menuArcos">
+                    <select class="ArcoFav">
+                      <option value="">Arco Favorito</option>
+                      <option value="east blue">east blue</option>
+                      <option value="grandLine">grand Line</option>
+                      <option value="alabasta">Alabasta</option>
+                      <option value="skypiea">Skypiea</option>
+                      <option value="water 7">Water 7</option>
+                      <option value="thriller bark">Thriller Bark</option>
+                      <option value="marineford">Marineord</option>
+                      <option value="Ilha dos homens peixe">
+                        Ilha dos homens peixe
+                      </option>
+                    </select>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-        <div class="infos">
-          <div class="jaCadastrado">
-            <h2>Ja possui um <br />cadastro?</h2>
-            <span>clique no botao a baixo e faca seu login</span>
-            <button>login</button>
+              <button class="btnCadastrar">Finalizar</button>
+            </form>
+
+            <div class="divisoria"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="../js/changePage.js"></script>
   </body>
 </html>

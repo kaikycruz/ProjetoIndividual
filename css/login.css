@@ -110,26 +110,22 @@ li a {
   width: 9.5vw;
 }
 
-.img img {
-  border-radius: 15%;
-}
-
-.jaCadastrado h2 {
+.naoCadastrado h2 {
   font-size: 25pt;
   font-weight: 800;
 }
 
-.jaCadastrado span {
+.naoCadastrado span {
   font-size: 16pt;
 }
 
-.jaCadastrado h2,
+.naoCadastrado h2,
 span {
   color: #000;
   margin-left: 35px;
 }
 
-.jaCadastrado button {
+.naoCadastrado button {
   margin-left: 35px;
   color: #fffefe;
   font-weight: 800;
@@ -144,7 +140,7 @@ span {
   box-shadow: 10px 10px 10px #7c7b7b;
 }
 
-.jaCadastrado {
+.naoCadastrado {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,7 +191,7 @@ form .input {
 
 .form-container {
   display: flex;
-  background-image: url(../images/fundoCada.webp);
+  background-image: url(../images/bandoFullFinal.webp);
   background-position: center;
   background-size: cover;
   align-items: center;
@@ -206,10 +202,10 @@ form .input {
 }
 
 /*.divisoria {
-  height: 80%;
-  border-left: 3px solid #fff;
-  margin-right: 20px;
-}*/
+    height: 80%;
+    border-left: 3px solid #fff;
+    margin-right: 20px;
+  }*/
 
 .container {
   box-shadow: -20px 15px 20px #304c69;
@@ -221,114 +217,20 @@ form .input {
   justify-content: space-between;
 }
 
-.btnCadastrar {
+.btnLogin {
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 12pt;
   font-weight: 800;
+  font-size: 12pt;
   padding: 15px;
   box-shadow: 8px 10px 10px #36506e;
   width: 40%;
-  margin-top: 15px;
+  margin-top: 35px;
   background: linear-gradient(to right, #70a9e1, #569ce1, #4293e4);
   border-radius: 30px;
   margin-bottom: 10px;
   cursor: pointer;
-}
-
-.options {
-  height: fit-content;
-  width: 27.8vw;
-}
-
-.menuArcos select {
-  padding: 12px;
-  border: none;
-  outline: none;
-  background: #e2e3e3;
-  width: 100%;
-  color: #4f4f4f;
-  font-weight: 700;
-}
-
-.menuEps select {
-  font-weight: 700;
-  padding: 12px;
-  border: none;
-  outline: none;
-  color: #4f4f4f;
-  background: #e2e3e3;
-  width: 100%;
-}
-
-option {
-  font-weight: 700;
-  font-size: 10pt;
-}
-
-.menuEps {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: #e2e3e3;
-  height: 40px;
-  border-radius: 20px;
-  width: 100%;
-  padding: 23px;
-  box-shadow: 8px 10px 10px #36506e;
-  border: none;
-  outline: none;
-}
-
-.menuArcos {
-  box-shadow: 8px 10px 10px #36506e;
-  margin-top: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background: #e2e3e3;
-  height: 40px;
-  border-radius: 20px;
-  width: 100%;
-  padding: 23px;
-  border: none;
-  outline: none;
-}
-
-.btn-select i {
-  font-size: 17px;
-}
-
-.verOpcoes .opcoes {
-  transition: 1s;
-  display: none;
-  position: relative;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.verOpcoes:hover .opcoes {
-  display: block;
-}
-
-.opcoes .opcao {
-  display: flex;
-  height: 55px;
-  cursor: pointer;
-  padding: 16px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-}
-
-.opcoes .opcao:hover {
-  background: #f3f2f2;
 }
 
 input::placeholder {
