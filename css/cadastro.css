@@ -1,189 +1,202 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    background: #69a6e3;
+  background: #69a6e3;
 }
 
 header {
-    background: transparent;
-    width: 100vw;
-    padding: 1%;
+  background: transparent;
+  width: 100vw;
+  padding: 1%;
 }
 
 .nav {
- display: flex;
- justify-content: space-between;   
+  display: flex;
+  justify-content: space-between;
 }
 
 .navegation {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navegation li {
-    margin-left: 15px;
-    letter-spacing: 3px;
-    font-size: 14pt;
+  margin-left: 15px;
+  letter-spacing: 3px;
+  font-size: 14pt;
 }
 
 li a {
-    
-    font-size: 13pt;
+  font-size: 13pt;
   color: #dde0e3;
   font-weight: 500;
   border-bottom: 2px solid transparent;
 }
 
 .navegation a:hover {
-    color: #ffffff;
-    border-bottom: 1px solid #e3e3e3;
-    font-size: 14pt;
-    transition: 0.6s;
-  }
-
-  .in-up {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    padding-right: 40px;
-  }
-
-  .entrar {
-    color: #fff;
-    font-size: 14pt;
-  }
-  
-  .entrar a {
-    font-size: 14pt;
-    font-weight: 600;
-  }
-  
-  .entrar a:hover {
-    letter-spacing: 0.5px;
-    color: #fff4f4;
-    transition: 0.6s;
-  }
-  
-  .entrar:hover {
-    color: #ffffff;
-    font-size: 15pt;
-    border-bottom: 1px solid #e3e3e3;
-    transition: 0.6s;
-  }
-
-  .cadastro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 9vw;
-    margin-left: 30px;
-    background-color: #e0e0e0;
-    padding: 10px;
-    border: none;
-    border-radius: 12px;
-    outline: none;
-  }
-  
-  .cadastro a {
-    color: #000000;
-    margin-right: 5px;
-    margin-left: 10px;
-  }
-  
-  .cadastro:hover {
-    transition: 0.6s;
-    letter-spacing: 1px;
-    background-color: #fcfdff;
-    width: 9.5vw;
-  }
-
-.menuEps {
-    width: 210px;
+  color: #ffffff;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 14pt;
+  transition: 0.6s;
 }
 
+.in-up {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-right: 40px;
+}
+
+.entrar {
+  color: #fff;
+  font-size: 14pt;
+}
+
+.entrar a {
+  font-size: 14pt;
+  font-weight: 600;
+}
+
+.entrar a:hover {
+  letter-spacing: 0.5px;
+  color: #fff4f4;
+  transition: 0.6s;
+}
+
+.entrar:hover {
+  color: #ffffff;
+  font-size: 15pt;
+  border-bottom: 1px solid #e3e3e3;
+  transition: 0.6s;
+}
+
+.cadastro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9vw;
+  margin-left: 30px;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+}
+
+.cadastro a {
+  color: #000000;
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+.cadastro:hover {
+  transition: 0.6s;
+  letter-spacing: 1px;
+  background-color: #fcfdff;
+  width: 9.5vw;
+}
+
+.menuEps {
+  width: 210px;
+}
 
 .menuEps .btn-select {
-    align-items: center;
-    justify-content: space-between;
-    border: none;
-    background: #fff;
-    border-radius: 6px;
-    display: flex;
-    height: 40px;
-    padding: 10px;
-    font-size: 12pt;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: #fff;
+  border-radius: 6px;
+  display: flex;
+  height: 40px;
+  padding: 10px;
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn-select i {
-    font-size: 17px;
+  font-size: 17px;
 }
 
-
-.verOpcoes .opcoes{
-    transition: 1s;
-    display: none;
-    position: relative;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-top: 5px;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+.verOpcoes .opcoes {
+  transition: 1s;
+  display: none;
+  position: relative;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 5px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .verOpcoes:hover .opcoes {
-    display: block;
+  display: block;
 }
 
-
 .opcoes .opcao {
-    display: flex;
-    height: 55px;
-    cursor: pointer;
-    padding: 0 16px;
-    border-radius: 8px;
-    align-items: center;
-    background: #fff;
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  padding: 0 16px;
+  border-radius: 8px;
+  align-items: center;
+  background: #fff;
 }
 
 .opcoes .opcao:hover {
-    background: #f3f2f2;
+  background: #f3f2f2;
 }
 
 input::placeholder {
-    color: #4f4f4f;
+  color: #4f4f4f;
 }
 
 input {
-    padding: 0 16px;
-    border: none;
-    outline: none;
-    background: #e2e3e3;
-    width: 100%;
+  padding: 0 16px;
+  border: none;
+  outline: none;
+  background: #e2e3e3;
+  width: 100%;
 }
 
 .input {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    color: #4f4f4f;
-    background: #e2e3e3;
-    height: 40px;
-    border-radius: 20px;
-    width: 25%;
-    padding: 0 18px;
-    margin-bottom: 15px;
-    border: none;
-    outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #4f4f4f;
+  background: #e2e3e3;
+  height: 40px;
+  border-radius: 20px;
+  width: 25%;
+  padding: 0 18px;
+  margin-bottom: 15px;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-cadastro {
+  width: 50vw;
+  background: #000000;
+}
+
+.login-cadastro form {
+  width: 100%;
+  background: #4f4f4f;
 }
