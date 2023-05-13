@@ -115,7 +115,7 @@ li a {
 }
 
 .jaCadastrado h2 {
-  font-size: 25pt;
+  font-size: 28pt;
   font-weight: 800;
 }
 
@@ -125,8 +125,8 @@ li a {
 
 .jaCadastrado h2,
 span {
-  color: #000;
-  margin-left: 35px;
+  color: #ffffff;
+  margin-left: 50px;
 }
 
 .jaCadastrado button {
@@ -141,7 +141,7 @@ span {
   outline: none;
   margin-top: 10px;
   cursor: pointer;
-  box-shadow: 10px 10px 10px #7c7b7b;
+  box-shadow: 10px 10px 10px #36506e;
 }
 
 .jaCadastrado {
@@ -154,7 +154,9 @@ span {
 
 .infos {
   z-index: 1;
-  background: #fff;
+  background-image: url(../images/one-piece.jpg);
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,11 +167,11 @@ span {
 }
 
 form .tituloCadastro {
-  color: #fff;
-  text-shadow: 8px 10px 10px #36506e;
+  color: #4f4f4f;
+  text-shadow: 5px 5px 15px #36506e;
   font-weight: 800;
   margin-bottom: 10px;
-  font-size: 30pt;
+  font-size: 35pt;
 }
 
 form .input {
@@ -194,10 +196,9 @@ form .input {
 }
 
 .form-container {
+  background-color: #e7e7e7;
+  /*background: linear-gradient(to right,#56a6f5 ,#6baef6 , #77b8f9,#7fc9f6 );*/
   display: flex;
-  background-image: url(../images/fundoCada.webp);
-  background-position: center;
-  background-size: cover;
   align-items: center;
   justify-content: space-around;
   width: 60%;
@@ -213,6 +214,7 @@ form .input {
 
 .container {
   box-shadow: -20px 15px 20px #304c69;
+  width: 80vw;
   height: 80vh;
   display: flex;
   margin-top: 25px;
@@ -225,13 +227,13 @@ form .input {
   border: none;
   outline: none;
   color: #ffffff;
-  font-size: 12pt;
+  font-size: 13pt;
   font-weight: 800;
   padding: 15px;
   box-shadow: 8px 10px 10px #36506e;
   width: 40%;
-  margin-top: 15px;
-  background: linear-gradient(to right, #70a9e1, #569ce1, #4293e4);
+  margin-top: 25px;
+  background: linear-gradient(to right, #a3d0fd, #70b4f8, #69aff5);
   border-radius: 30px;
   margin-bottom: 10px;
   cursor: pointer;
@@ -239,14 +241,14 @@ form .input {
 
 .options {
   height: fit-content;
-  width: 27.8vw;
+  width: 28.7vw;
 }
 
 .menuArcos select {
   padding: 12px;
   border: none;
   outline: none;
-  background: #e2e3e3;
+  background: #efefef;
   width: 100%;
   color: #4f4f4f;
   font-weight: 700;
@@ -258,7 +260,7 @@ form .input {
   border: none;
   outline: none;
   color: #4f4f4f;
-  background: #e2e3e3;
+  background: #efefef;
   width: 100%;
 }
 
@@ -271,23 +273,23 @@ option {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: #e2e3e3;
+  background: #efefef;
   height: 40px;
   border-radius: 20px;
   width: 100%;
   padding: 23px;
-  box-shadow: 8px 10px 10px #36506e;
+  box-shadow: 8px 5px 10px #4d5f73;
   border: none;
   outline: none;
 }
 
 .menuArcos {
-  box-shadow: 8px 10px 10px #36506e;
+  box-shadow: 8px 5px 10px #4d5f73;
   margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background: #e2e3e3;
+  background: #efefef;
   height: 40px;
   border-radius: 20px;
   width: 100%;
@@ -296,40 +298,7 @@ option {
   outline: none;
 }
 
-.btn-select i {
-  font-size: 17px;
-}
 
-.verOpcoes .opcoes {
-  transition: 1s;
-  display: none;
-  position: relative;
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-}
-
-.verOpcoes:hover .opcoes {
-  display: block;
-}
-
-.opcoes .opcao {
-  display: flex;
-  height: 55px;
-  cursor: pointer;
-  padding: 16px;
-  border-radius: 8px;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-}
-
-.opcoes .opcao:hover {
-  background: #f3f2f2;
-}
 
 input::placeholder {
   color: #4f4f4f;
@@ -340,7 +309,7 @@ input {
   padding: 10px;
   border: none;
   outline: none;
-  background: #e2e3e3;
+  background: #efefef;
   width: 100%;
 }
 
@@ -349,15 +318,15 @@ input {
   align-items: center;
   justify-content: flex-start;
   color: #4f4f4f;
-  background: #e2e3e3;
+  background: #efefef;
   height: 40px;
   border-radius: 20px;
   width: 60%;
   padding: 23px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: none;
   outline: none;
-  box-shadow: 8px 10px 10px #36506e;
+  box-shadow: 8px 5px 10px #4d5f73;
 }
 
 .login-cadastro {
