@@ -77,7 +77,7 @@
               <div class="options">
                 <div class="campoInput">
                   <div class="menuEps">
-                    <select class="verOpcoes">
+                    <select class="verOpcoes" id="opcoesEp">
                       <option value="Eps">Episodios Assistidos</option>
                       <option value="200" class="opcao">
                         Menos de 200 eps
@@ -92,18 +92,18 @@
 
                 <div class="campoInput">
                   <div class="menuArcos">
-                    <select class="ArcoFav">
-                      <option value="">Arco Favorito</option>
-                      <option value="east blue">east blue</option>
-                      <option value="grandLine">grand Line</option>
-                      <option value="alabasta">Alabasta</option>
-                      <option value="skypiea">Skypiea</option>
-                      <option value="water 7">Water 7</option>
-                      <option value="thriller bark">Thriller Bark</option>
-                      <option value="marineford">Marineord</option>
-                      <option value="Ilha dos homens peixe">
-                        Ilha dos homens peixe
-                      </option>
+                    <select class="arcoFav" id="personagensFav">
+                      <option value="0">Mugiwara favorito</option>
+                      <option value="1">Luffy</option>
+                      <option value="2">Zoro</option>
+                      <option value="3">Sanji</option>
+                      <option value="4">Jimbei</option>
+                      <option value="5">Brook</option>
+                      <option value="6">Robin</option>
+                      <option value="7">Nami</option>
+                      <option value="8">Franky</option>
+                      <option value="9">Usopp</option>
+                      <option value="10">Chopper</option>
                     </select>
                   </div>
                 </div>
@@ -133,6 +133,8 @@
     var idadevar = input_idade.value;
     var senhaVar = input_Senha.value;
     var confirmacaoSenhaVar = input_confirme_senha.value;
+    var epsAssistidosVar = opcoesEp.value;
+    var personagemFavVar = personagesnFav.value;
 
     if (
       nomeVar == "" ||
@@ -140,7 +142,9 @@
       ufVar == "" ||
       idadevar == "" ||
       senhaVar == "" ||
-      confirmacaoSenhaVar == ""
+      confirmacaoSenhaVar == "" ||
+      epsAssistidosVar == "" ||
+      personagemFavVar == ""
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
@@ -164,6 +168,7 @@
         nomeServer: nomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
+        confirmeSenhaServer: confirmacaoSenhaVar,
       }),
     })
       .then(function (resposta) {
