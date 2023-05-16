@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - One Piece</title>
+    <link rel="stylesheet" href="./css/cadastro.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="./js/funcoes.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav">
+          <div class="navegation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="#">Arcos</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="container">
+        <div class="infos">
+          <div class="jaCadastrado">
+            <h2>Ja possui um <br />registro?</h2>
+            <span>clique no botao a baixo e faca seu login</span>
+            <button onclick="logar()">login</button>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="login-cadastro">
+            <form class="cadastro-form">
+              <h2 class="tituloCadastro">Cadastro</h2>
+              <div class="campoInput input">
+                <i class="fa-solid fa-user"></i>
+                <input id="input_user" type="text" placeholder="Nome Usuário" />
+              </div>
+              <div class="campoInput input">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="input_email" type="text" placeholder="Email" />
+              </div>
+              <div class="campoInput input">
+                <i class="fa-solid fa-flag"></i>
+                <input id="input_Uf" type="text" placeholder="UF" />
+              </div>
+              <div class="campoInput input">
+                <i class="fa-sharp fa-solid fa-calendar-days"></i>
+                <input id="input_idade" type="date" placeholder="Idade" />
+              </div>
+              <div class="campoInput input">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  id="input_Senha"
+                  type="password"
+                  placeholder="Digite uma senha"
+                />
+              </div>
+              <div class="campoInput input">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  id="input_confirme_senha"
+                  type="password"
+                  placeholder="Confirme sua senha"
+                />
+              </div>
+              <div class="options">
+                <div class="campoInput">
+                  <div class="menuEps">
+                    <select class="verOpcoes">
+                      <option value="Eps">Episodios Assistidos</option>
+                      <option value="200" class="opcao">
+                        Menos de 200 eps
+                      </option>
+                      <option value="500">quase 500 eps</option>
+                      <option value="800">quase 800 eps</option>
+                      <option value="SemanaisA">ja estou nos semanais!</option>
+                      <option value="SemanaisM">ja estou no Manga!</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="campoInput">
+                  <div class="menuArcos">
+                    <select class="ArcoFav">
+                      <option value="">Arco Favorito</option>
+                      <option value="east blue">east blue</option>
+                      <option value="grandLine">grand Line</option>
+                      <option value="alabasta">Alabasta</option>
+                      <option value="skypiea">Skypiea</option>
+                      <option value="water 7">Water 7</option>
+                      <option value="thriller bark">Thriller Bark</option>
+                      <option value="marineford">Marineord</option>
+                      <option value="Ilha dos homens peixe">
+                        Ilha dos homens peixe
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button class="btnCadastrar">Finalizar</button>
+            </form>
+
+            <div class="divisoria"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/changePage.js"></script>
+  </body>
+</html>
+
+<script>
+  function cadastrar() {
+    aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = input_user.value;
+    var emailVar = input_email.value;
+    var ufVar = input_Uf.value;
+    var idadevar = input_idade.value;
+    var senhaVar = input_Senha.value;
+    var confirmacaoSenhaVar = input_confirme_senha.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      ufVar == "" ||
+      idadevar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>

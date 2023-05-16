@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - One Piece</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav">
+          <div class="navegation">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li><a href="#">Arcos</a></li>
+            <li><a href="#">Sobre Mim</a></li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="main">
+      <div class="container">
+        <div class="infos">
+          <div class="naoCadastrado">
+            <h2>Ainda nao possui um <br />cadastro?</h2>
+            <span>clique no botao a baixo e Cadastre-se</span>
+            <button onclick="cadastro()">Registre-se</button>
+          </div>
+        </div>
+        <div class="form-container">
+          <div class="login-cadastro">
+            <form class="cadastro-form">
+              <h2 class="tituloCadastro">Login</h2>
+
+              <div class="campoInput input">
+                <i class="fa-solid fa-envelope"></i>
+                <input id="input_email" type="text" placeholder="Email" />
+              </div>
+
+              <div class="campoInput input">
+                <i class="fa-solid fa-lock"></i>
+                <input
+                  id="input_Senha"
+                  type="password"
+                  placeholder="Digite uma senha"
+                />
+              </div>
+
+              <button class="btnLogin">Entrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/changePage.js"></script>
+  </body>
+</html>
+
+<script>
+  function entrar() {
+    aguardar();
+
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+
+    if (emailVar == "" || senhaVar == "") {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    console.log("FORM LOGIN: ", emailVar);
+    console.log("FORM SENHA: ", senhaVar);
+
+    fetch("/usuarios/autenticar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!");
+
+        if (resposta.ok) {
+          console.log(resposta);
+
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.EMAIL_USUARIO = json.email;
+            sessionStorage.NOME_USUARIO = json.nome;
+            sessionStorage.ID_USUARIO = json.id;
+
+            setTimeout(function () {
+              window.location = "./dashboard/cards.html";
+            }, 1000); // apenas para exibir o loading
+          });
+        } else {
+          console.log("Houve um erro ao tentar realizar o login!");
+
+          resposta.text().then((texto) => {
+            console.error(texto);
+            finalizarAguardar(texto);
+          });
+        }
+      })
+      .catch(function (erro) {
+        console.log(erro);
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>
