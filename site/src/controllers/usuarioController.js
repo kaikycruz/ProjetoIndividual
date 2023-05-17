@@ -65,6 +65,8 @@ function cadastrar(req, res) {
     var nome = req.body.nomeServer;
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
+    var epsAssistidos = req.body.epsAssistidosServer;
+    var personagemFav = req.body.personagemFavServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -73,10 +75,14 @@ function cadastrar(req, res) {
         res.status(400).send("Seu email está undefined!");
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
-    } else {
+    } else if (epsAssistidos == undefined) {
+        res.status(400).send("Qtd eps assistidos está undefined!");
+    } else if (personagemFav == undefined) {
+        res.status(400).send("Seu personagem Favorito está undefined!");
+    }else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, senha)
+        usuarioModel.cadastrar(nome, email, senha, epsAssistidos, personagemFav)
             .then(
                 function (resultado) {
                     res.json(resultado);

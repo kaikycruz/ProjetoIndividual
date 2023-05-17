@@ -56,7 +56,7 @@
                 />
               </div>
 
-              <button class="btnLogin">Entrar</button>
+              <button class="btnLogin" onclick="entrar()">Entrar</button>
             </form>
           </div>
         </div>
@@ -69,19 +69,17 @@
 
 <script>
   function entrar() {
-    aguardar();
+    //aguardar();
 
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
+    var emailVar = input_email.value;
+    var senhaVar = input_Senha.value;
 
     if (emailVar == "" || senhaVar == "") {
-      cardErro.style.display = "block";
+      /*cardErro.style.display = "block";
       mensagem_erro.innerHTML =
         "(Mensagem de erro para todos os campos em branco)";
-      finalizarAguardar();
+      finalizarAguardar();*/
       return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
     }
 
     console.log("FORM LOGIN: ", emailVar);
@@ -112,7 +110,7 @@
             sessionStorage.ID_USUARIO = json.id;
 
             setTimeout(function () {
-              window.location = "./dashboard/cards.html";
+              window.location = "teste.html";
             }, 1000); // apenas para exibir o loading
           });
         } else {
@@ -120,7 +118,7 @@
 
           resposta.text().then((texto) => {
             console.error(texto);
-            finalizarAguardar(texto);
+            //finalizarAguardar(texto);
           });
         }
       })
@@ -131,7 +129,7 @@
     return false;
   }
 
-  function sumirMensagem() {
+  /*function sumirMensagem() {
     cardErro.style.display = "none";
-  }
+  }*/
 </script>
