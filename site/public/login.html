@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - One Piece</title>
-    <script src="./js/funcoes.js"></script>
     <link rel="stylesheet" href="./css/login.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -14,6 +14,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="./js/funcoes.js"></script>
   </head>
   <body>
     <header>
@@ -39,7 +40,7 @@
         </div>
         <div class="form-container">
           <div class="login-cadastro">
-            <form class="cadastro-form">
+            <div class="cadastro-form">
               <h2 class="tituloCadastro">Login</h2>
 
               <div class="campoInput input">
@@ -57,7 +58,7 @@
               </div>
 
               <button class="btnLogin" onclick="entrar()">Entrar</button>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -109,9 +110,15 @@
             sessionStorage.NOME_USUARIO = json.nome;
             sessionStorage.ID_USUARIO = json.id;
 
-            setTimeout(function () {
-              window.location = "teste.html";
-            }, 1000); // apenas para exibir o loading
+            swal(
+              "Parabens",
+              "Login realizado redirecionando para o Área do usuário!",
+              "success"
+            );
+
+            setTimeout(() => {
+              window.location = "./homeLogin.html";
+            }, 3000);
           });
         } else {
           console.log("Houve um erro ao tentar realizar o login!");

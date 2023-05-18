@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - One Piece</title>
-    <!-- Sweet alert-->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- Sweet alert -->
     <link rel="stylesheet" href="./css/cadastro.css" />
     <link
@@ -44,7 +44,7 @@
         </div>
         <div class="form-container">
           <div class="login-cadastro">
-            <form class="cadastro-form">
+            <div class="cadastro-form">
               <h2 class="tituloCadastro">Cadastro</h2>
               <div class="campoInput input">
                 <i class="fa-solid fa-user"></i>
@@ -113,7 +113,7 @@
               <button class="btnCadastrar" onclick="cadastrar()">
                 Finalizar
               </button>
-            </form>
+            </div>
 
             <div class="divisoria"></div>
           </div>
@@ -125,7 +125,7 @@
   </body>
 </html>
 
-<!--<script>
+<!--<script>1
   function cadastrar() {
     //aguardar();
 
@@ -138,7 +138,7 @@
     var senhaVar = input_Senha.value;
     var confirmacaoSenhaVar = input_confirme_senha.value;
     var epsAssistidosVar = opcoesEp.value;
-    var personagemFavVar = personagesnFav.value;
+    var personagemFavVar = personagensFav.value;
 
     if (
       nomeVar == "" ||
@@ -188,7 +188,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";*/
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "./login.html";
           }, "2000");
 
           //limparFormulario();
@@ -209,7 +209,6 @@
     cardErro.style.display = "none";
   }*/
 </script>-->
-
 <script>
   function cadastrar() {
     //aguardar();
@@ -218,6 +217,8 @@
     // Agora vá para o método fetch logo abaixo
     var nomeVar = input_user.value;
     var emailVar = input_email.value;
+    var ufVar = input_Uf.value;
+    var idadevar = input_idade.value;
     var senhaVar = input_Senha.value;
     var confirmacaoSenhaVar = input_confirme_senha.value;
     var epsAssistidosVar = opcoesEp.value;
@@ -226,17 +227,19 @@
     if (
       nomeVar == "" ||
       emailVar == "" ||
+      ufVar == "" ||
+      idadevar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
       epsAssistidosVar == "" ||
       personagemFavVar == ""
     ) {
       //cardErro.style.display = "block"
-      swal("Ops", "Preencha todos os campos 😠", "error");
+      swal("Ops", "Preencha todos os campos 😠", "warning");
 
-      finalizarAguardar();
+      //finalizarAguardar();
       return false;
-    } else if (nomeVar.length < 8) {
+    } else if (nomeVar.length < 2) {
       swal(
         "Ops",
         "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠",
@@ -245,22 +248,16 @@
     } else if (
       emailVar.indexOf("@") == -1 ||
       emailVar.indexOf(".com") == -1 ||
-      emailVar.length < 12
+      emailVar.length < 6
     ) {
+      swal("Ops", "Por favor, insira um E-mail válido", "warning");
+    } else if (senhaVar.length < 4) {
       swal(
         "Ops",
-        "O e-mail cadastrado é inválido. Por favor, insira um e-mail válido 😠",
-        "warning"
-      );
-    } else if (senhaVar.length < 5) {
-      swal(
-        "Ops",
-        "A senha inserida é muito curta. Por favor,insira uma senha com pelo menos 8 caracteres 😠",
+        "A senha inserida é muito curta. Por favor, insira uma com pelo menos 5 caracteres",
         "warning"
       );
     } else {
-      setInterval("oi", 5000);
-
       // Enviando o valor da nova input
       fetch("/usuarios/cadastrar", {
         method: "POST",
@@ -272,6 +269,8 @@
           // Agora vá para o arquivo routes/usuario.js
           nomeServer: nomeVar,
           emailServer: emailVar,
+          ufServer: ufVar,
+          idadeServer: idadevar,
           senhaServer: senhaVar,
           epsAssistidosServer: epsAssistidosVar,
           personagemFavServer: personagemFavVar,
@@ -284,23 +283,22 @@
             //cardErro.style.display = "block";
             swal(
               "Parábens",
-              "Cadastro realizado com sucesso redirecionando a tela de login 😄...!",
+              "Cadastro realizado redirecionando para o login!",
               "success"
             );
-
             setTimeout(() => {
-              window.location = "login.html";
+              window.location = "./login.html";
             }, 3000);
 
-            limparFormulario();
-            finalizarAguardar();
+            //limparFormulario();
+            //finalizarAguardar();
           } else {
             swal("Ops", "Mais de um usuário com o mesmo login e senha 😭!");
           }
         })
         .catch(function (resposta) {
           console.log(`#ERRO: ${resposta}`);
-          finalizarAguardar();
+          //finalizarAguardar();
         });
 
       return false;
@@ -311,3 +309,88 @@
   //cardErro.style.display = "none"
   //}
 </script>
+
+<!--<script>
+  function cadastrar() {
+    // aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = input_user.value;
+    var emailVar = input_email.value;
+    var ufVar = input_Uf.value;
+    var idadevar = input_idade.value;
+    var senhaVar = input_Senha.value;
+    var confirmacaoSenhaVar = input_confirme_senha.value;
+    var epsAssistidosVar = opcoesEp.value;
+    var personagemFavVar = personagensFav.value;
+
+    if (
+      nomeVar == "" ||
+      emailVar == "" ||
+      ufVar == "" ||
+      idadevar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == "" ||
+      epsAssistidosVar == "" ||
+      personagemFavVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "(Mensagem de erro para todos os campos em branco)";
+
+      // finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        emailServer: emailVar,
+        ufServer: ufVar,
+        idadeServer: idadevar,
+        senhaServer: senhaVar,
+        epsAssistidosServer: epsAssistidosVar,
+        personagemFavServer: personagemFavVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "./login.html";
+          }, "2000");
+
+          // limparFormulario();
+          //  finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>-->

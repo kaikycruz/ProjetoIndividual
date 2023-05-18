@@ -160,7 +160,7 @@ span {
   border-radius: 25px 0 0 25px;
 }
 
-form .tituloCadastro {
+.cadastro-form > .tituloCadastro {
   color: #fff;
   text-shadow: 8px 10px 10px #36506e;
   font-weight: 800;
@@ -168,7 +168,7 @@ form .tituloCadastro {
   font-size: 30pt;
 }
 
-form .input {
+.cadastro-form > .input {
   padding: 20px;
   width: 60%;
 }
@@ -177,7 +177,7 @@ form .input {
   height: 50vh;
 }
 
-.login-cadastro form {
+.login-cadastro .cadastro-form {
   display: flex;
   flex-direction: column;
   align-items: center;

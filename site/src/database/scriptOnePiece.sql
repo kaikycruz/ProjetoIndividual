@@ -2,12 +2,14 @@ create database OnePiece;
 use onepiece;
 show tables; 
 
+drop database onepiece;
+
 
 create table usuario (
  idUser int primary key auto_increment,
  Nome varchar(45) not null,
  Email varchar(60) not null, constraint chkEmail check(email like '%@%'),
- UF char(2) not null,
+ UF char(2),
  dtNasc date,
  Senha varchar(40) not null,
  fkEps int,
