@@ -1,0 +1,8 @@
+body {
+    display: flex; 
+    justify-content: center;
+}
+
+#grafico1, #grafico2 {
+    width: 800px
+}

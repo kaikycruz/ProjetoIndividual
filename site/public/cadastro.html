@@ -235,14 +235,14 @@
       personagemFavVar == ""
     ) {
       //cardErro.style.display = "block"
-      swal("Ops", "Preencha todos os campos 😠", "warning");
+      swal("Ops", "Preencha todos os campos ", "warning");
 
       //finalizarAguardar();
       return false;
     } else if (nomeVar.length < 2) {
       swal(
         "Ops",
-        "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres 😠",
+        "O nome inserido é muito curto. Por favor, insira um nome com pelo menos 8 caracteres ",
         "warning"
       );
     } else if (
@@ -283,7 +283,7 @@
             //cardErro.style.display = "block";
             swal(
               "Parábens",
-              "Cadastro realizado redirecionando para o login!",
+              "Cadastro realizado com sucesso redirecionando a tela de login!",
               "success"
             );
             setTimeout(() => {
@@ -293,7 +293,7 @@
             //limparFormulario();
             //finalizarAguardar();
           } else {
-            swal("Ops", "Mais de um usuário com o mesmo login e senha 😭!");
+            swal("Ops", "Mais de um usuário com o mesmo login e senha !");
           }
         })
         .catch(function (resposta) {
