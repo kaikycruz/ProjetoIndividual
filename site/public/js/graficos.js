@@ -1,8 +1,6 @@
-nomeUser.innerHTML = sessionStorage.NOME_USUARIO;
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 let proximaAtualizacao;
-
-
 
 window.onload = obterDadosGraficos();
 
@@ -47,13 +45,13 @@ function plotarGrafico(resposta, idAquario) {
         fill: false,
         backgroundColor: [
           "#e64c4c", //luffy
-        "#a56dda", //zoro
-        "#fff046", //sanji
-        "orange", // nami
-        "#52d9ff",
-        "#f7a24e",
-        "#cf6ef0",
-        "#e6c149",
+          "#a56dda", //zoro
+          "#fff046", //sanji
+          "orange", // nami
+          "#52d9ff",
+          "#f7a24e",
+          "#cf6ef0",
+          "#e6c149",
         ],
         border: "none",
         tension: 0.1,
@@ -63,14 +61,15 @@ function plotarGrafico(resposta, idAquario) {
         data: [],
         fill: false,
         backgroundColor: [
-        "#e64c4c", //luffy
-        "#a56dda", //zoro
-        "#fff046", //sanji
-        "orange", // nami
-        "#52d9ff",
-        "#f7a24e",
-        "#cf6ef0",
-        "#e6c149",],
+          "#e64c4c", //luffy
+          "#a56dda", //zoro
+          "#fff046", //sanji
+          "orange", // nami
+          "#52d9ff",
+          "#f7a24e",
+          "#cf6ef0",
+          "#e6c149",
+        ],
         border: "none",
         tension: 0.1,
       },
@@ -110,7 +109,6 @@ function plotarGrafico(resposta, idAquario) {
     labels.push(registro.NomePersonagem);
     dados.datasets[0].data.push(registro.personagem);
     dados.datasets[1].data.push(registro.PersonagemFavorito);
-    console.log(registro.momento_grafico);
   }
 
   console.log("----------------------------------------------");
@@ -206,8 +204,6 @@ function atualizarGrafico(idAquario, dados, myChart) {
       console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
     });
 }
-
-
 
 /*
 
