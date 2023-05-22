@@ -1,4 +1,8 @@
+nomeUser.innerHTML = sessionStorage.NOME_USUARIO;
+
 let proximaAtualizacao;
+
+
 
 window.onload = obterDadosGraficos();
 
@@ -16,7 +20,7 @@ function obterDadosGrafico(idAquario) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-          resposta.reverse();
+          resposta;
 
           plotarGrafico(resposta, idAquario);
         });
@@ -42,14 +46,14 @@ function plotarGrafico(resposta, idAquario) {
         data: [],
         fill: false,
         backgroundColor: [
-          "#e64c4c",
-          "#a56dda",
-          "#568bfd",
-          "#202020",
-          "#f7a24e",
-          "#52d9ff",
-          "#cf6ef0",
-          "#e6c149",
+          "#e64c4c", //luffy
+        "#a56dda", //zoro
+        "#fff046", //sanji
+        "orange", // nami
+        "#52d9ff",
+        "#f7a24e",
+        "#cf6ef0",
+        "#e6c149",
         ],
         border: "none",
         tension: 0.1,
@@ -58,7 +62,15 @@ function plotarGrafico(resposta, idAquario) {
         label: "",
         data: [],
         fill: false,
-        backgroundColor: ["#e64c4c", "#a56dda", "#568bfd", "#202020"],
+        backgroundColor: [
+        "#e64c4c", //luffy
+        "#a56dda", //zoro
+        "#fff046", //sanji
+        "orange", // nami
+        "#52d9ff",
+        "#f7a24e",
+        "#cf6ef0",
+        "#e6c149",],
         border: "none",
         tension: 0.1,
       },
@@ -110,7 +122,7 @@ function plotarGrafico(resposta, idAquario) {
   console.log("----------------------------------------------");
 
   const config = {
-    type: "doughnut",
+    type: "bar",
     data: dados,
   };
 
@@ -195,7 +207,9 @@ function atualizarGrafico(idAquario, dados, myChart) {
     });
 }
 
-/*b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+/*
 
 let proximaAtualizacao;
 

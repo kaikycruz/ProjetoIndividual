@@ -12,7 +12,7 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                         FORMAT(momento, 'HH:mm:ss') as momento_grafico
                     from medida
                     where fk_aquario = ${idAquario}
-                    order by id desc`;
+                    order by id `;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito, personagem.nomePersonagem as NomePersonagem   
         from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;`;
@@ -36,7 +36,7 @@ function buscarMedidasEmTempoReal(idAquario) {
                         CONVERT(varchar, momento, 108) as momento_grafico, 
                         fk_aquario 
                         from medida where fk_aquario = ${idAquario} 
-                    order by id desc`;
+                    order by id`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito , personagem.nomePersonagem as NomePersonagem   

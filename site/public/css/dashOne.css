@@ -1,5 +1,14 @@
-body {
-    display: flex; 
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dash {
+    display: flex;
+    align-items: center;
+    width: 80vw;
+    height: 100vh;
     justify-content: center;
 }
 

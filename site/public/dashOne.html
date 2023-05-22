@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - One Piece</title>
     <link rel="stylesheet" href="./css/dashOne.css" />
+    <script src="./js/funcoes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-  <body onload=" atualizarFeed()">
+  <body onload="validarSessao()">
     <h1>One Piece - Fans Stats</h1>
 
     <div class="hello">
-      <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+      <h3>Olá,<span id="nomeUser"></span>!</h3>
     </div>
-    <!-- <div class="btn-logout" onclick="limparSessao()">
-                    <h3>Sair</h3>
-                </div>-->
+    <button class="btn-logout" onclick="limparSessao()">Sair</button>
 
     <div class="dash">
-      <div>
+      <div class="grafico1">
         <canvas id="myChart1"></canvas>
+      </div>
+      <div class="grafico2">
         <canvas id="myChart2"></canvas>
       </div>
     </div>

@@ -49,7 +49,12 @@ create table usuario (
  (null, 'ja estou no Manga!');
  
  
+ 
+ 
  desc usuario;
 
 select * from usuario;
 select * from epsAssistidos;
+
+select count(usuario.fkPersonagem) as PersonagemFavorito , personagem.nomePersonagem as NomePersonagem   
+        from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;
