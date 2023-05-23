@@ -10,10 +10,32 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body onload="validarSessao()">
+    <header>
+      <nav>
+        <ul class="nav">
+          <div class="navegation">
+            <li><a href="./homeLogin.html">Home</a></li>
+            <li><a href="./personagens.html">Personagens</a></li>
+            <li><a href="./dashOne.html" class="active">Dashboard</a></li>
+            <li><a href="#">Quiz</a></li>
+            <li><a href="./sobreMim.html">Sobre Mim</a></li>
+          </div>
+          <div class="in-up">
+            <li class="UserArea">
+              <i
+                class="fa-solid fa-circle-user fa-lg"
+                style="color: #818080"
+              ></i>
+              <a href="./pageUser.html">Área do Usuário</a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
     <h1>One Piece - Fans Stats</h1>
 
     <div class="hello">
-      <h3>Olá,<span id="b_usuario"></span>!</h3>
+      <h3>Olá,<span id="b_usuario">usuario</span>!</h3>
     </div>
     <button class="btn-logout" onclick="limparSessao()">Sair</button>
 
@@ -32,4 +54,6 @@
 
 <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+  validarSessao();
 </script>
