@@ -1,20 +1,12 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idAquario, limite_linhas) {
+function dadosPersonagem(idPersonagem) {
   instrucaoSql = "";
 
   if (process.env.AMBIENTE_PROCESSO == "producao") {
-    instrucaoSql = `select top ${limite_linhas}
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,  
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idAquario}
-                    order by id `;
+    instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito, personagem.nomePersonagem as NomePersonagem from usuario join personagem on fkPersonagem = ${idPersonagem} group by nomePersonagem; `;
   } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-    instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito, personagem.nomePersonagem as NomePersonagem   
-        from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;`;
+    instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito, personagem.nomePersonagem as NomePersonagem from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;`;
   } else {
     console.log(
       "\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n"
@@ -26,20 +18,15 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
   return database.executar(instrucaoSql);
 }
 
-function buscarMedidasEmTempoReal(idAquario) {
+function dadosEps(idEps) {
   instrucaoSql = "";
 
   if (process.env.AMBIENTE_PROCESSO == "producao") {
-    instrucaoSql = `select top 1
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,  
-                        CONVERT(varchar, momento, 108) as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id`;
+    instrucaoSql = `select count(usuario.fkEps) as EpsAssistidos, epsassistidos.qtdEps as QuantidadeEps
+    from usuario join epsassistidos on fkEps = ${idEps} group by qtdEps;`;
   } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-    instrucaoSql = `select count(usuario.fkPersonagem) as PersonagemFavorito , personagem.nomePersonagem as NomePersonagem   
-        from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;`;
+    instrucaoSql = `select count(usuario.fkEps) as EpsAssistidos, epsassistidos.qtdEps as QuantidadeEps
+    from usuario join epsassistidos on fkEps = idEps group by qtdEps;`;
   } else {
     console.log(
       "\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n"
@@ -52,6 +39,6 @@ function buscarMedidasEmTempoReal(idAquario) {
 }
 
 module.exports = {
-  buscarUltimasMedidas,
-  buscarMedidasEmTempoReal,
+  dadosPersonagem,
+  dadosEps,
 };

@@ -9,8 +9,27 @@
 body {
   width: 100%;
   height: 100vh;
-  background-color: #4783d3;
   font-family: "Poppins", sans-serif;
+}
+
+.in-up {
+  display: flex;
+  align-items: center;
+}
+
+.in-up button {
+  margin-left: 15px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #c2c6ca;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 12pt;
 }
 
 .dash {
