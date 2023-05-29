@@ -1,37 +1,42 @@
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
+validarSessao();
+
 let proximaAtualizacao;
 
-window.onload = obterDadosGraficos();
+window.onload = obterDadosPersonagem();
 
-function obterDadosGraficos() {
-  obterDadosGrafico(2);
+function obterDadosPersonagem() {
+  obterDadosPersonaFav(1);
 }
 
-function obterDadosGrafico(idAquario) {
+function obterDadosPersonaFav(idPersonagem) {
   if (proximaAtualizacao != undefined) {
     clearTimeout(proximaAtualizacao);
   }
 
-  fetch(`/medidas/ultimas/${idAquario}`, { cache: "no-store" })
+  fetch(`/medidas/dadosPersonagem/${idPersonagem}`, { cache: "no-store" })
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (resposta) {
           console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
           resposta;
 
-          plotarGrafico(resposta, idAquario);
+          plotarGraficoPersonagem(resposta, idPersonagem);
         });
       } else {
         console.error("Nenhum dado encontrado ou erro na API");
       }
     })
     .catch(function (error) {
-      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      console.error(
+        `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+      );
     });
 }
 
-function plotarGrafico(resposta, idAquario) {
+// grafico personagens
+function plotarGraficoPersonagem(resposta, idPersonagem) {
   console.log("iniciando plotagem do gráfico...");
 
   let labels = [];
@@ -48,7 +53,6 @@ function plotarGrafico(resposta, idAquario) {
         tension: 0.1,
       },
       {
-        //donnut
         label: "",
         data: [],
         fill: false,
@@ -56,9 +60,13 @@ function plotarGrafico(resposta, idAquario) {
           "#e64c4c", //luffy
           "#a56dda", //zoro
           "#fff046", //sanji
-          "orange", // nami
-          "#52d9ff",
-          "#f7a24e",
+                     // jimbei
+                     //brook
+          "#cf6ef0", //robin 
+          "#f7a24e",  // nami
+          "#cf64d3", // franky
+                     //usopp
+                    // chopper
           "#cf6ef0",
           "#e6c149",
         ],
@@ -84,7 +92,7 @@ function plotarGrafico(resposta, idAquario) {
   console.log("----------------------------------------------");
   console.log("O gráfico será plotado com os respectivos valores:");
   console.log("Labels:");
-  console.log(labels);
+  console.log(resposta);
   console.log("Dados:");
   console.log(dados.datasets);
   console.log("----------------------------------------------");
@@ -94,33 +102,24 @@ function plotarGrafico(resposta, idAquario) {
     data: dados,
   };
 
-  let myChart1 = new Chart(document.getElementById("myChart1"), config);
-  setTimeout(() => atualizarGrafico(idAquario, dados, myChart1), 2000);
+  let myChart = new Chart(document.getElementById(`myChart1`), config);
+  setTimeout(
+    () => atualizarGraficoPersonagem(idPersonagem, dados, myChart1),
+    2000
+  );
 }
 
-// Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-// buscando a última medida inserida em tabela contendo as capturas,
-
-//     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-//     Para ajustar o "select", ajuste o comando sql em src/models
-function atualizarGrafico(idAquario, dados, myChart) {
-  fetch(`/medidas/tempo-real/${idAquario}`, { cache: "no-store" })
+function atualizarGraficoPersonagem(idPersonagem, dados, myChart1) {
+  fetch(`/medidas/dadosPersonagem/${idPersonagem}`, { cache: "no-store" })
     .then(function (response) {
       if (response.ok) {
         response.json().then(function (novoRegistro) {
           let avisoCaptura = document.getElementById(
-            `avisoCaptura${idAquario}`
+            `avisoCaptura${idPersonagem}`
           );
 
-          // apagar o primeiro de umidade
-          // dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
-
-          // apagar o primeiro de temperatura
-          // dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
-
-          // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
           proximaAtualizacao = setTimeout(
-            () => atualizarGrafico(idAquario, dados, myChart),
+            () => atualizarGraficoPersonagem(idPersonagem, dados, myChart1),
             2000
           );
         });
@@ -128,12 +127,14 @@ function atualizarGrafico(idAquario, dados, myChart) {
         console.error("Nenhum dado encontrado ou erro na API");
         // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
         proximaAtualizacao = setTimeout(
-          () => atualizarGrafico(idAquario, dados, myChart),
+          () => atualizarGraficoPersonagem(idPersonagem, dados, myChart1),
           2000
         );
       }
     })
     .catch(function (error) {
-      console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+      console.error(
+        `Erro na obtenção dos dados p/ gráfico: ${error.message}`
+      );
     });
 }
