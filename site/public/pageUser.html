@@ -7,7 +7,13 @@
     <title>Área do Usário - One Piece</title>
     <link rel="stylesheet" href="./css/pageUser.css" />
   </head>
-  <body>
-    <h1>Ola funano</h1>
+  <body onload="validarSessao()">
+    <h1>Olá, <span id="b_usuario">usuario</span>!</h1>
   </body>
 </html>
+
+<script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+  validarSessao();
+</script>

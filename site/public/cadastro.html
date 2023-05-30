@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro - One Piece</title>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
     <link rel="stylesheet" href="./css/cadastro.css" />
     <link
       rel="stylesheet"
@@ -34,7 +32,22 @@
       </nav>
     </header>
     <div class="main">
-      <ul class="notificacoes"></ul>
+      <ul class="notificacoes">
+        <li class="aviso success none" id="sucesso">
+          <div class="coluna">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Cadastro realizado com sucesso!</span>
+          </div>
+          <i class="fa-solid fa-xmark" id="fecharSuccess"></i>
+        </li>
+        <li class="aviso error none" id="erro">
+          <div class="coluna">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <span>Erro ao realizar o cadastro!</span>
+          </div>
+          <i class="fa-solid fa-xmark" id="fecharError"></i>
+        </li>
+      </ul>
       <div class="container">
         <div class="infos">
           <div class="jaCadastrado">
@@ -46,7 +59,6 @@
         <div class="form-container">
           <div class="login-cadastro">
             <div class="cadastro-form">
-              <h2 class="tituloCadastro">Cadastro</h2>
               <div class="campoInput input">
                 <i class="fa-solid fa-user"></i>
                 <input id="input_user" type="text" placeholder="Nome Usuário" />
@@ -111,9 +123,8 @@
                   </div>
                 </div>
               </div>
-              <button class="btnTeste" id="btnTeste">testando</button>
               <button class="btnCadastrar" onclick="cadastrar()">
-                Finalizar
+                Cadastrar
               </button>
             </div>
 

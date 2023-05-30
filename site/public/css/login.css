@@ -17,6 +17,99 @@ body {
   justify-content: center;
 }
 
+.notificacoes {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+}
+
+.notificacoes .aviso {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  border-radius: 10px;
+  padding: 16px 17px;
+  margin-bottom: 10px;
+  background-color: #dfdfdf;
+  justify-content: space-between;
+  animation: show_aviso 0.3s ease forwards;
+}
+
+@keyframes show_aviso {
+  0% {
+    transform: translateX(100%);
+  }
+  40% {
+    transform: translateX(-5%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.notificacoes :where(.aviso, .coluna) {
+  display: flex;
+  align-items: center;
+}
+
+.aviso .coluna i {
+  font-size: 25px;
+}
+
+.aviso .coluna span {
+  color: #4f4f4f;
+  font-size: 1.07rem;
+  margin-left: 12px;
+}
+
+.aviso i:last-child {
+  color: #aeb0d7;
+  cursor: pointer;
+}
+
+.aviso i:last-child:hover {
+  color: #4f4f4f;
+}
+
+.aviso::before {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  animation: progress 3s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    width: 0%;
+  }
+}
+
+.aviso.success::before {
+  background: #0abf30;
+}
+
+.aviso.error::before {
+  background: #e24d4c;
+}
+
+.aviso.success .coluna i {
+  color: #0abf30;
+}
+
+.aviso.error .coluna i {
+  color: #e24d4c;
+}
+
+.none {
+  display: none;
+}
+
 header {
   height: 8vh;
   background: transparent;

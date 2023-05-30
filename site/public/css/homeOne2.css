@@ -29,14 +29,6 @@ nav ul {
   font-size: 14pt;
 }
 
-.in-up {
-  color: #000000;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding-right: 40px;
-}
-
 .navegation a:hover {
   color: #ffffff;
   border-bottom: 1px solid #cecece;
@@ -44,58 +36,21 @@ nav ul {
   transition: 0.6s;
 }
 
-.entrar {
-  color: #fff;
-  font-size: 14pt;
-}
-
-.entrar a {
+.user a {
   font-size: 14pt;
   font-weight: 600;
+  margin-left: 10px;
 }
 
-.entrar a:hover {
+.user a:hover {
   letter-spacing: 0.5px;
   color: #fff4f4;
-  transition: 0.6s;
-}
-
-.entrar:hover {
-  color: #ffffff;
-  font-size: 15pt;
-  border-bottom: 1px solid #cccccc;
   transition: 0.6s;
 }
 
 .active {
   color: #ffffff;
   border-bottom: 1px solid #d0d0d1;
-}
-
-.cadastro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 9vw;
-  margin-left: 30px;
-  background-color: #e0e0e0;
-  padding: 10px;
-  border: none;
-  border-radius: 12px;
-  outline: none;
-}
-
-.cadastro a {
-  color: #000000;
-  margin-right: 5px;
-  margin-left: 10px;
-}
-
-.cadastro:hover {
-  transition: 0.6s;
-  letter-spacing: 1px;
-  background-color: #fcfdff;
-  width: 9.5vw;
 }
 
 li a {
