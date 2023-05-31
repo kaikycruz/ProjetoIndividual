@@ -35,6 +35,20 @@ body {
   animation: show_aviso 0.3s ease forwards;
 }
 
+.notificacoes .aviso.success {
+  background-image: linear-gradient(to right, #0bbe327e, #6dc46a 50%);
+}
+
+.content .titulo {
+  color: #fff;
+  font-weight: 700;
+}
+
+
+.notificacoes .aviso.error {
+  background-image: linear-gradient(to right, #d10a0a67, #cd6f6f 50%);
+}
+
 @keyframes show_aviso {
   0% {
     transform: translateX(100%);
@@ -60,18 +74,18 @@ body {
 }
 
 .aviso .coluna span {
-  color: #4f4f4f;
+  color: #ffffff;
   font-size: 1.07rem;
   margin-left: 12px;
 }
 
 .aviso i:last-child {
-  color: #aeb0d7;
+  color: #38393c;
   cursor: pointer;
 }
 
 .aviso i:last-child:hover {
-  color: #4f4f4f;
+  color: #cbcbcb;
 }
 
 .aviso::before {

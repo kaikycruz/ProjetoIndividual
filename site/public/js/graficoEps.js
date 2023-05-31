@@ -43,10 +43,10 @@ function plotarGraficoEps(resposta, idEps) {
     labels: labels2,
     datasets: [
       {
-        label: "Eps assistidos",
+        label: "",
         data: [],
-        fill: false,
-        borderColor: "none",
+        fill: false,  
+        border: "none",
         tension: 0.1,
       },
       {
@@ -63,7 +63,7 @@ function plotarGraficoEps(resposta, idEps) {
           "#cf6ef0",
           "#e6c149",
         ],
-        borderColor: "none",
+        border: "none",
         tension: 0.1,
       },
     ],

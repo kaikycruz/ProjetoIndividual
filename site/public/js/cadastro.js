@@ -1,32 +1,3 @@
-// const notificacoes = document.querySelector('.notificacoes'),
-// button = document.querySelectorAll('.btnTeste');
-
-// const detalhesAlerta = {
-//     success: {
-//         icon: 'fa-circle-check style="color:#0abf30"',
-//         texto: 'Cadastro realizado com sucesso!'
-//     },
-//     error: {
-//         icon: 'fa-circle-xmark',
-//         texto: 'Erro ao realizar cadastro, verifique seus dados'
-//     }
-// }
-
-//     const criarAviso = (id) => {
-
-//         const aviso = document.createElement("li")
-//         aviso.className = `aviso ${id}`
-//         aviso.innerHTML = `<div class="coluna">
-//         <i class="fa-solid fa-circle-check"  style="color:#0abf30"></i>
-//         <span>Cadastro realizado com sucesso!</span>
-//       </div>
-//       <i class="fa-solid fa-xmark"></i>`
-//       notificacoes.appendChild(aviso)
-//     }
-
-//     button.forEach(btnTeste => {
-//         btnTeste.addEventListener('click', () => criarAviso(btnTeste.id))
-//     })
 
 var CampoSuccess = document.getElementById("sucesso");
 var CampoError = document.getElementById("erro");
