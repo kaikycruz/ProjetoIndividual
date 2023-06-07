@@ -8,8 +8,53 @@
     <link rel="stylesheet" href="./css/quiz.css" />
   </head>
   <body>
-    <h1>One Piece Quiz</h1>
-    <h4>Demosntre seus conhecimentos sobre One Piece</h4>
+    <div class="main">
+      <h1>One Piece Quiz</h1>
+      <h4>Demosntre seus conhecimentos sobre One Piece</h4>
+      <div class="container">
+        <div class="questoes">
+          <div class="pergunta">
+            <span>1. Qual o nome do navio dos chapeus de palha?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA1"
+                value="Oro Jackson"
+              >
+                <span class="content"> Oro Jackson </span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB1"
+                value="Red Force"
+              >
+                <span class="content"> Red Force </span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC1"
+                value="Chapéus de Palha"
+              >
+                <span class="content"> Chapéus de palha </span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD1"
+                value="Thousand Sunny"
+              >
+                <span class="content">Thousand Sunny</span>
+              </div>
+            </div>
+          </div>
+          <div class="pergunta"></div>
+        </div>
+        <button onclick="proxima()">Proxima Questão</button>
+      </div>
+    </div>
     <script src="./js/quiz.js"></script>
   </body>
 </html>
