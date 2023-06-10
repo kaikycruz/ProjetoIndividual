@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz - One Piece</title>
+    <link rel="stylesheet" href="./css/quiz.css" />
+  </head>
+  <body>
+    <div class="main">
+      <h1>One Piece Quiz</h1>
+      <h4>Demosntre seus conhecimentos sobre One Piece</h4>
+      <div class="container" id="container">
+        <div class="questoes" id="questions">
+          <div class="pergunta per1 view" id="quest1">
+            <span>1. Qual o nome do navio dos chapeus de palha?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA1"
+                value="Oro Jackson"
+              >
+                <span class="content"> Oro Jackson </span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB1"
+                value="Red Force"
+              >
+                <span class="content"> Red Force </span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC1"
+                value="Chapéus de Palha"
+              >
+                <span class="content"> Chapéus de palha </span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD1"
+                value="Thousand Sunny"
+              >
+                <span class="content">Thousand Sunny</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per2 none" id="quest2">
+            <span
+              >2. Por quantos membros é composto o bando dos chapéus de
+              palha?</span
+            >
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA2"
+                value="10"
+              >
+                <span class="content"> 10</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB2"
+                value="11"
+              >
+                <span class="content"> 11</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC2"
+                value="9"
+              >
+                <span class="content">9</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD2"
+                value="12"
+              >
+                <span class="content">12</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per3 none" id="quest3">
+            <span>3. Qual o sobrenome do Sanji?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA3"
+                value="Portgas Sanji"
+              >
+                <span class="content"> Portgas Sanji</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB3"
+                value="Figarland Sanji"
+              >
+                <span class="content">Figarland Sanji</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC3"
+                value="Vinsmoke Sanji"
+              >
+                <span class="content">Vinsmoke Sanji</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD3"
+                value="Kozuki Sanji"
+              >
+                <span class="content">Kozuki Sanji</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per4 none" id="quest4">
+            <span
+              >4. Em qual arco o Luffy utiliza a técnica gear fourth pela
+              primeira vez?</span
+            >
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA4"
+                value="Wano"
+              >
+                <span class="content"> Wano</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB4"
+                value="Alabasta"
+              >
+                <span class="content">Alabasta</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC4"
+                value="Skypiea"
+              >
+                <span class="content">Skypiea</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD4"
+                value="Dressrosa"
+              >
+                <span class="content">Dressrosa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per5 none" id="quest5">
+            <span>5. Quem é o braço direito do Luffy?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA5"
+                value="Shanks"
+              >
+                <span class="content"> Shanks</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB5"
+                value="Sanji"
+              >
+                <span class="content">Sanji</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC5"
+                value="Zoro"
+              >
+                <span class="content">Zoro</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD5"
+                value="Sabo"
+              >
+                <span class="content">Sabo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per6 none" id="quest6">
+            <span>6. Quem o Luffy reencontra no arco de Alabasta?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA6"
+                value="Ace"
+              >
+                <span class="content">Ace</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB6"
+                value="Shanks"
+              >
+                <span class="content">Shanks</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC6"
+                value="Sabo"
+              >
+                <span class="content">Sabo</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD6"
+                value="Garp"
+              >
+                <span class="content">Garp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per7 none" id="quest7">
+            <span>7. O que descobrimos sobre o Luffy no arco de Wano?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA7"
+                value="O verdadeiro nome de sua fruta"
+              >
+                <span class="content">O verdadeiro nome de sua fruta</span
+                ><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB7"
+                value="Quem é sua mãe"
+              >
+                <span class="content">Quem é sua mãe</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC7"
+                value="Qual sua verdadeira motivação"
+              >
+                <span class="content">Qual sua verdadeira motivação</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD7"
+                value="Seu verdadeiro nome"
+              >
+                <span class="content">Seu verdadeiro nome</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per8 none" id="quest8">
+            <span>8. Quanto tempo durou o timeskip?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA8"
+                value="9 meses"
+              >
+                <span class="content">9 meses</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB8"
+                value="1 ano"
+              >
+                <span class="content">1 ano</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC8"
+                value="5 meses"
+              >
+                <span class="content">5 meses</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD8"
+                value="2 anos"
+              >
+                <span class="content">2 anos</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per9 none" id="quest9">
+            <span>9. Quais são os novos imperadores do mar?</span>
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA9"
+                value="Shanks, Luffy, Buggy, Teach"
+              >
+                <span class="content">Shanks, Luffy, Buggy, Teach</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB9"
+                value="Barba branca, Doflamingo, Luffy, Shanks"
+              >
+                <span class="content"
+                  >Barba branca, Doflamingo, Luffy, Shanks</span
+                ><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC9"
+                value="Kaido, Big Mom, Shanks, Luffy"
+              >
+                <span class="content">Kaido, Big Mom, Shanks, Luffy</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD9"
+                value="Teach, Dragon, Buggy, Shanks"
+              >
+                <span class="content">Teach, Dragon, Buggy, Shanks</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pergunta per10 none" id="quest10">
+            <span
+              >10. Quantas vezes Luffy foi derrotado por Kaido ate finalmente
+              vencer?</span
+            >
+            <div class="alternativas">
+              <div
+                class="resps r1"
+                onclick="clicou()"
+                id="alternativaA10"
+                value="12 vezes"
+              >
+                <span class="content">12 vezes</span><br />
+              </div>
+              <div
+                class="resps r2"
+                onclick="clicou()"
+                id="alternativaB10"
+                value="9 vezes"
+              >
+                <span class="content">9 vezes</span><br />
+              </div>
+              <div
+                class="resps r3"
+                onclick="clicou()"
+                id="alternativaC10"
+                value="10 vezes"
+              >
+                <span class="content">10 vezes</span><br />
+              </div>
+              <div
+                class="resps r4"
+                onclick="clicou()"
+                id="alternativaD10"
+                value="5 vezes"
+              >
+                <span class="content">5 vezes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="botoes">
+          <button onclick="voltar()" class="view" id="btnPrev">Voltar</button>
+          <button onclick="proxima()" class="view" id="btnNext">Proxima</button>
+          <button onclick="finalizar()" class="none" id="btnFinalizar">
+            Finalizar Quiz
+          </button>
+          <button onclick="verdash()" class="none" id="btnverDash">
+            Resultados
+          </button>
+        </div>
+        <div class="numQuest" id="numQuest"></div>
+      </div>
+    </div>
+    <script src="./js/quiz.js"></script>
+  </body>
+</html>

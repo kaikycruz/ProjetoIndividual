@@ -6,55 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz - One Piece</title>
     <link rel="stylesheet" href="./css/quiz.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <div class="main">
-      <h1>One Piece Quiz</h1>
-      <h4>Demosntre seus conhecimentos sobre One Piece</h4>
-      <div class="container">
-        <div class="questoes">
-          <div class="pergunta">
-            <span>1. Qual o nome do navio dos chapeus de palha?</span>
-            <div class="alternativas">
-              <div
-                class="resps r1"
-                onclick="clicou()"
-                id="alternativaA1"
-                value="Oro Jackson"
-              >
-                <span class="content"> Oro Jackson </span><br />
-              </div>
-              <div
-                class="resps r2"
-                onclick="clicou()"
-                id="alternativaB1"
-                value="Red Force"
-              >
-                <span class="content"> Red Force </span><br />
-              </div>
-              <div
-                class="resps r3"
-                onclick="clicou()"
-                id="alternativaC1"
-                value="Chapéus de Palha"
-              >
-                <span class="content"> Chapéus de palha </span><br />
-              </div>
-              <div
-                class="resps r4"
-                onclick="clicou()"
-                id="alternativaD1"
-                value="Thousand Sunny"
-              >
-                <span class="content">Thousand Sunny</span>
-              </div>
+      <header>
+        <nav>
+          <ul class="nav">
+            <div class="navegation">
+              <li><a href="#">Home</a></li>
+              <li><a href="./personagensLogin.html">Personagens</a></li>
+              <li><a href="./dashOne.html">Dashboard</a></li>
+              <li><a href="./quizteste.html" class="active">Quiz</a></li>
+              <li><a href="./sobremimLogin">Sobre Mim</a></li>
+            </div>
+            <div class="in-up">
+              <li class="user">
+                <i
+                  class="fa-solid fa-circle-user fa-xl"
+                  style="color: #7c7c7c"
+                ></i>
+                <a href="./pageUser.html">Área do Usuário</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <ul class="notificacoes">
+        <li class="aviso success none" id="sucesso">
+          <div class="coluna">
+            <i class="fa-solid fa-circle-check"></i>
+            <div class="content">
+              <div class="titulo"><span>Sucesso</span></div>
+              <span>Quiz finalizado com sucesso, Parabens!</span>
             </div>
           </div>
-          <div class="pergunta"></div>
+          <i class="fa-solid fa-xmark" id="fecharSuccess"></i>
+        </li>
+        <li class="aviso error none" id="erro">
+          <div class="coluna">
+            <i class="fa-solid fa-circle-xmark"></i>
+            <div class="content">
+              <div class="titulo"><span>Ops</span></div>
+              <span>Responda todas as questoes antes de finalizar!</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-xmark" id="fecharError"></i>
+        </li>
+      </ul>
+      <h1>One Piece Quiz</h1>
+      <h4>Demonstre seus conhecimentos sobre One Piece</h4>
+      <div class="container" id="container">
+        <div class="menuInicial">
+          <span>
+            O quiz consiste em 10 perguntas sobre o anime One Piece, todas as
+            questões possuem somente uma alternativa correta e cada uma delas
+            vale 1 ponto. Ao final do quiz será calculado e exibido o desempenho
+            do participante. </span
+          ><span class="boaSorte">Boa sorte a todos! &#x2764;</span>
         </div>
-        <button onclick="proxima()">Proxima Questão</button>
+        <div class="botoes" id="botoes">
+          <button onclick="iniciar()" class="iniciar">Iniciar Quiz</button>
+        </div>
+        <div class="numQuest" id="numQuest"></div>
       </div>
     </div>
-    <script src="./js/quiz.js"></script>
+
+    <script src="./js/quizteste.js"></script>
   </body>
 </html>

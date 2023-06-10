@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cronometro" id="cronometro">
+      <span id="minuto"> 00</span>:<span id="segundo">00</span>
+    </div>
+  </body>
+</html>
+
+<script>
+  let segundos = 0;
+  let minutos = 0;
+  let cron;
+
+  function timer() {
+    if (segundos == 60) {
+      segundos = 0;
+      minutos++;
+      document.getElementById("minuto").innerText = returnData(minutos);
+    } else {
+      segundos++;
+      document.getElementById("segundo").innerText = returnData(segundos);
+    }
+  }
+
+  cron = setInterval(function () {
+    timer();
+  }, 1000);
+
+  function returnData(input) {
+    return input >= 10 ? input : `0${input}`;
+  }
+</script>
