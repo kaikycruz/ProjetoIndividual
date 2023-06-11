@@ -25,8 +25,7 @@ function entrar() {
     return false;
   }
 
-  console.log("FORM LOGIN: ", emailVar);
-  console.log("FORM SENHA: ", senhaVar);
+  
 
   fetch("/usuarios/autenticar", {
     method: "POST",
@@ -62,6 +61,10 @@ function entrar() {
           }, 3000);
         });
       } else {
+        CampoError.classList.remove("none");
+        setTimeout(() => {
+          CampoError.classList.add("none");
+        }, 3000);
         console.log("Houve um erro ao tentar realizar o login!");
 
         resposta.text().then((texto) => {

@@ -74,14 +74,6 @@ li a {
   margin-left: 35px;
 }
 
-.cronometro {
-  position: fixed;
-  top: 180px;
-  right: 470px;
-  color: #f1f1f1;
-  border-bottom: 1px solid #bababa;
-  font-weight: 800;
-}
 
 .notificacoes {
   position: fixed;

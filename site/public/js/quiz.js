@@ -124,35 +124,32 @@ var respostasUser = [];
 var i = 0;
 var numeroQuestao = 1;
 
-let segundos = 0;
-let minutos = 0;
-let cron;
+// let segundos = 0;
+// let minutos = 0;
+// let cron;
 
-function timer() {
-  if (segundos == 60) {
-    segundos = 0;
-    minutos++;
-    document.getElementById("minuto").innerText = returnData(minutos);
-  } else {
-    segundos++;
-    document.getElementById("segundo").innerText = returnData(segundos);
-  }
-}
+// function timer() {
+//   if (segundos == 60) {
+//     segundos = 0;
+//     minutos++;
+//     document.getElementById("minuto").innerText = returnData(minutos);
+//   } else {
+//     segundos++;
+//     document.getElementById("segundo").innerText = returnData(segundos);
+//   }
+// }
 
-cron = setInterval(() => {
-  timer();
-}, 1000);
+// cron = setInterval(() => {
+//   timer();
+// }, 1000);
 
-function returnData(input) {
-  return input >= 10 ? input : `0${input}`;
-}
+// function returnData(input) {
+//   return input >= 10 ? input : `0${input}`;
+// }
 
 function iniciar() {
   var question = `<div id="questao${questions[i].numQuest}" class="questoes">`;
   question += ` 
-    <div class="cronometro" id="cronometro">
-      <span id="minuto"> 00</span>:<span id="segundo">00</span>
-    </div>
         <span id="spanPergunta">${questions[i].numQuest}. ${
     questions[i].pergunta
   }</span>
@@ -299,35 +296,36 @@ function finalizar() {
 
     if (respostasCertas == 10) {
       container.innerHTML = `
-            <span id="resultados">Parabéns, você acertou ${respostasCertas}/10 questões, <br> você é um verdadeiro tripulante!</span>
+            <span id="resultados">Parabéns, você acertou ${(respostasCertas/10)*100}% das questões, <br> você é um verdadeiro tripulante!</span>
         `;
     } else if (respostasCertas >= 8 && respostasCertas <= 9) {
       container.innerHTML = `
-            <span id="resultados">Parabéns, você acertou 0${respostasCertas}/10 questões, <br> você é um verdadeiro fã!</span>
+            <span id="resultados">Parabéns, você acertou ${(respostasCertas/10)*100}% das questões, <br> você é um verdadeiro fã!</span>
         `;
     } else if (respostasCertas >= 5 && respostasCertas < 8) {
       container.innerHTML = `
-            <span id="resultados">Parabéns, você acertou 0${respostasCertas}/10 questões, <br> precisa acompanhar mais o anime!</span>
+            <span id="resultados">Parabéns, você acertou ${(respostasCertas/10)*100}% das questões, <br> precisa acompanhar mais o anime!</span>
         `;
     } else {
       container.innerHTML = `
-            <span id="resultados">xiiii, você acertou 0${respostasCertas}/10 questões,<br> precisa assistir o anime antes de responder o quiz!</span>
+            <span id="resultados">xiiii, você acertou ${(respostasCertas/10)*100}% das questões,<br> precisa assistir o anime antes de responder o quiz!</span>
         `;
     }
 
     container.innerHTML += `
+              <h1 style="color:white;">${respostasCertas}/10</h1>
             <p>Clique aqui para ver sua posição no ranking</p>
             <div class="botaoResult" id="botoes">
-            <button onclick="verdash()" id="btnverDash">
+            <button onclick="verResultado()" id="btnverDash">
             Resultados
           </button>
           </div>  
         `;
   }
-  clearInterval(cron);
-  console.log(cron);
+  // clearInterval(cron);
+  // console.log(cron);
 }
 
-function verdash() {
+function verResultado() {
   window.location = "../homeLogin.html";
 }
