@@ -155,7 +155,7 @@ function iniciar() {
   }</span>
     
     <div class="questoes">
-        <div class="alternativas">
+        <div class="alternativas" id="clicouA">
         <div class ="resps">
             <input 
                 type="radio" 
@@ -169,7 +169,7 @@ function iniciar() {
   }</label>
             </div>
         </div>
-        <div class="alternativas">
+        <div class="alternativas" id="clicouB">
         <div class ="resps">
             <input 
                 type="radio" 
@@ -183,7 +183,7 @@ function iniciar() {
   }</label>
             </div>
         </div>
-        <div class="alternativas">
+        <div class="alternativas" id="clicouC">
         <div class ="resps">
             <input 
                 type="radio" 
@@ -197,7 +197,7 @@ function iniciar() {
   }</label>
             </div>
         </div>
-        <div class="alternativas">
+        <div class="alternativas" id="clicouD">
         <div class ="resps">
             <input 
                 type="radio" 
@@ -227,6 +227,7 @@ function iniciar() {
   container.innerHTML = question;
   numQuest.innerHTML = `Questao ${numeroQuestao} de 10`;
 }
+
 
 var next = document.getElementById("btnNext");
 var prev = document.getElementById("btnPrev");

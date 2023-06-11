@@ -13,8 +13,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body onload="validarSessao()">
     <div class="main">
       <header>
         <nav>
@@ -24,15 +36,20 @@
               <li><a href="./personagensLogin.html">Personagens</a></li>
               <li><a href="./dashOne.html">Dashboard</a></li>
               <li><a href="./quiz.html" class="active">Quiz</a></li>
-              <li><a href="./sobremimLogin">Sobre Mim</a></li>
+              <li><a href="./sobremimLogin.html">Sobre Mim</a></li>
             </div>
             <div class="in-up">
               <li class="user">
                 <i
                   class="fa-solid fa-circle-user fa-xl"
-                  style="color: #b3b3b3"
+                  style="color: #b4b2b2"
                 ></i>
                 <a href="./pageUser.html">Área do Usuário</a>
+              </li>
+              <li class="out">
+                <button class="btn-logout" onclick="limparSessao()">
+                  Sair
+                </button>
               </li>
             </div>
           </ul>
@@ -43,8 +60,8 @@
           <div class="coluna">
             <i class="fa-solid fa-circle-check"></i>
             <div class="content">
-              <div class="titulo"><span>Sucesso</span></div>
-              <span>Quiz finalizado com sucesso, Parabens!</span>
+              <div class="titulo"><span>Parabéns</span></div>
+              <span>Quiz finalizado com sucesso </span>
             </div>
           </div>
           <i class="fa-solid fa-xmark" id="fecharSuccess"></i>
@@ -54,22 +71,30 @@
             <i class="fa-solid fa-circle-xmark"></i>
             <div class="content">
               <div class="titulo"><span>Ops</span></div>
-              <span>Responda todas as questoes antes de finalizar!</span>
+              <span>Responda todas as questões antes de finalizar</span>
             </div>
           </div>
           <i class="fa-solid fa-xmark" id="fecharError"></i>
         </li>
       </ul>
-      <h1>One Piece Quiz</h1>
-      <h4>Demonstre seus conhecimentos sobre One Piece</h4>
+      <div class="titles">
+        <h1>One Piece Quiz</h1>
+        <h4>
+          Demonstre seus conhecimentos <br />
+          sobre One Piece
+        </h4>
+      </div>
       <div class="container" id="container">
         <div class="menuInicial">
+          <h3 style="margin-bottom: 20px">
+            Bem vindo game <span id="b_usuario"></span>!
+          </h3>
           <span>
-            O quiz consiste em 10 perguntas sobre o anime One Piece, todas as
-            questões possuem somente uma alternativa correta e cada uma delas
-            vale 1 ponto. Ao final do quiz será calculado e exibido o desempenho
-            do participante. </span
-          ><span class="boaSorte">Boa sorte a todos! &#x2764;</span>
+            O questionário consiste em 10 perguntas sobre o anime One Piece,
+            todas as questões possuem somente uma alternativa correta e cada uma
+            delas vale 1 ponto. Ao final do quiz será calculado e exibido o
+            desempenho do participante. </span
+          ><span class="boaSorte">Boa sorte! &#x2764;</span>
         </div>
         <div class="botoes" id="botoes">
           <button onclick="iniciar()" class="iniciar">Iniciar Quiz</button>
@@ -81,3 +106,9 @@
     <script src="./js/quiz.js"></script>
   </body>
 </html>
+
+<script>
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+  validarSessao();
+</script>

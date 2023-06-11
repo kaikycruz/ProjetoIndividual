@@ -60,6 +60,34 @@ li a {
   border-bottom: 2px solid transparent;
 }
 
+.in-up {
+  display: flex;
+  align-items: center;
+}
+
+.in-up button {
+  margin-left: 20px;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #d1d1d1;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 12pt;
+}
+
+.in-up button:hover {
+  color: #fff;
+  border: none;
+  background-color: rgb(253, 68, 35);
+  transition: 1s;
+}
+
 .navegation li {
   margin-left: 35px;
 }

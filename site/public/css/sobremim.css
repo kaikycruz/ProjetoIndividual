@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    width: 100%;
+    height: 100vh;
+    background-color: #bfd5f1;
+    font-family: "Poppins", sans-serif;
+  }
+
+  section {
+    height: 100vh;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+  }
+  
+  .navegation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 3px;
+    font-size: 14pt;
+  }
+  
+  .navegation a:hover {
+    color: #202020;
+    border-bottom: 1px solid #999999;
+    font-size: 14pt;
+    transition: 0.6s;
+  }
+  
+  .user a {
+    font-size: 14pt;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  
+  .user a:hover {
+    letter-spacing: 0.5px;
+    color: #808080;
+    transition: 0.6s;
+  }
+  
+  .active {
+    color: #141414;
+    border-bottom: 1px solid #686868;
+  }
+  
+  li a {
+    font-size: 13pt;
+    color: #444444;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+  }
+  
+  .in-up {
+    display: flex;
+    align-items: center;
+  }
+  
+  .in-up button {
+    margin-left: 20px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    color: #696969;
+    background: transparent;
+    border: 2px solid #808080;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 12pt;
+  }
+  
+  .in-up button:hover {
+    color: #fff;
+    border: none;
+    background-color: rgb(253, 68, 35);
+    transition: 1s;
+  }
+  
+  .navegation li {
+    margin-left: 35px;
+  }
+
+  .img img {
+    border-radius: 40%;
+    position: relative;
+    top: 100px;
+    right: 25px;
+    box-shadow: 0px 0px 55px rgb(64, 155, 216);
+  }
+
+  .text {
+    position: relative;
+    left: 25px;
+  }
+
+  .text h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 37pt;
+    letter-spacing: 1.5px;
+    color: #444444;
+  }
+
+  .text h4 {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 0.6px;
+  }
+
+  .text .introducao {
+    margin-top: 8px;
+  }
+
+  .destaque { 
+    font-weight: 700;
+    color: rgb(239, 80, 52)
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .guia {
+    width: 80%;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guia > a > button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 800;
+    color: #fff;
+    background-color: rgb(239, 80, 52);
+    border-radius: 10px;
+  }
