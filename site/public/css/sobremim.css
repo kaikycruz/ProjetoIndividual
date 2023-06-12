@@ -21,7 +21,11 @@
   }
 
   section {
-    height: 100vh;
+    min-height: 100vh;
+  }
+
+  #inicio, #historia {
+    box-shadow: 0px 2px 4px rgba(69, 69, 69, 0.5);
   }
   
   nav ul {
@@ -70,6 +74,40 @@
     font-weight: 500;
     border-bottom: 2px solid transparent;
   }
+
+  .itens a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0eeeeb0;
+    min-width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    color: #000000;
+  }
+  
+  .dropdown-content a {
+    color: #000000;
+  }
   
   .in-up {
     display: flex;
@@ -103,7 +141,7 @@
     margin-left: 35px;
   }
 
-  .img img {
+  .main > .img img {
     border-radius: 40%;
     position: relative;
     top: 100px;
@@ -113,7 +151,8 @@
 
   .text {
     position: relative;
-    left: 25px;
+    left: 35px;
+    top: 60px;
   }
 
   .text h1 {
@@ -164,3 +203,48 @@
     background-color: rgb(239, 80, 52);
     border-radius: 10px;
   }
+
+
+  .container {
+    position: relative;
+    left: 35px;
+    top: 60px;
+  }
+
+  .texto > h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 37pt;
+    letter-spacing: 1.5px;
+    color: #444444;
+  }
+
+  .texto {
+    position: absolute;
+    top: 100px;
+  }
+
+  .texts > .texto {
+    width: 45%;
+
+  }
+
+  .texts > .img img {
+    border-radius: 40%;
+    position: absolute;
+    top: 60px;
+    right: 45px;
+    box-shadow: 0px 0px 55px rgb(94, 175, 230);
+  }
+
+  .texto > .intro {
+    margin-top: 20px;
+  }
+
+  .texts > .img2 img {
+    border-radius: 10%;
+    position: absolute;
+    top: 400px;
+    right: 740px;
+    box-shadow: 0px 0px 55px rgb(64, 155, 216);
+  }
+
