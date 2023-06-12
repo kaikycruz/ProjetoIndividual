@@ -4,10 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Área do Usuário - One Piece</title>
+    <title>Dashboard - One Piece</title>
     <link rel="stylesheet" href="./css/dashOne.css" />
     <script src="./js/funcoes.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -39,12 +38,12 @@
           <div class="navegation">
             <li><a href="./homeLogin.html">Home</a></li>
             <li><a href="./personagensLogin.html">Personagens</a></li>
+
             <li><a href="./quiz.html">Quiz</a></li>
-            <li><a href="#ranking">Resultados Quiz</a></li>
             <li><a href="./sobremimLogin.html">Sobre Mim</a></li>
           </div>
           <div class="in-up">
-            <li class="user" class="active">
+            <li class="user">
               <i
                 class="fa-solid fa-circle-user fa-lg"
                 style="color: #b4b2b2"
@@ -58,46 +57,32 @@
         </ul>
       </nav>
     </header>
-    <section id="graficos">
-      <h1>One Piece - Fans Stats</h1>
+    <h1>One Piece - Resultados do Quiz</h1>
 
-      <div class="hello">
-        <h3>Olá,<span id="b_usuario">usuario</span>!</h3>
-      </div>
+    <div class="hello">
+      <h3>Olá,<span id="b_usuario">usuario</span>!</h3>
+    </div>
 
-      <div class="dash">
-        <div class="grafico1">
-          <canvas id="myChart1"></canvas>
-        </div>
-        <div class="grafico2">
-          <canvas id="myEps"></canvas>
-        </div>
+    <table
+      class="bordered, striped e centered highlight e responsive-table"
+      id="infos"
+      width="467"
+      border="1px"
+      bgcolor="transparent"
+      border-spacing:10px
+      30px
+    >
+      <div class="table-titulo">
+        <h1>Pontuação Geral</h1>
       </div>
-    </section>
-    <section id="ranking">
-      <table
-        class="bordered, striped e centered highlight e responsive-table"
-        id="infos"
-        width="467"
-        border="1px"
-        bgcolor="transparent"
-        border-spacing:10px
-        30px
-      >
-        <div class="table-titulo">
-          <h1>Pontuação Geral</h1>
-        </div>
-        <thead>
-          <tr class="title">
-            <th width="10%">Jogador</th>
-            <th width="10%">Pontuação</th>
-          </tr>
-        </thead>
-      </table>
-    </section>
+      <thead>
+        <tr class="title">
+          <th width="10%">Jogador</th>
+          <th width="10%">Pontuação</th>
+        </tr>
+      </thead>
+    </table>
 
     <script src="./js/pontos.js"></script>
-    <script src="./js/graficoPersonagem.js"></script>
-    <script src="./js/graficoEps.js"></script>
   </body>
 </html>

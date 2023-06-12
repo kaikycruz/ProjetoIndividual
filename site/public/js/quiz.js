@@ -3,6 +3,10 @@ var CampoError = document.getElementById("erro");
 var xizinho = document.getElementById("fecharSuccess");
 var xizinho2 = document.getElementById("fecharError");
 
+var idUsuarioVar = Number(sessionStorage.ID_USUARIO);
+
+
+
 xizinho2.addEventListener("click", () => {
   CampoError.classList.add("none");
 });
@@ -286,10 +290,6 @@ function finalizar() {
         respostasCertas++;
       }
     }
-    CampoSuccess.classList.remove("none");
-    setTimeout(() => {
-      CampoSuccess.classList.add("none");
-    }, 3000);
 
     /* setTimeout(() => {
             window.location = "./.html";
@@ -325,8 +325,41 @@ function finalizar() {
   }
   // clearInterval(cron);
   // console.log(cron);
+
+  console.log(respostasCertas)
+
+  fetch("/usuarios/quiz", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.j
+        idUsuarioServer: idUsuarioVar,
+        pontuacaoServer: respostasCertas,
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+    if (resposta.ok) {
+      CampoSuccess.classList.remove("none");
+      setTimeout(() => {
+        CampoSuccess.classList.add("none");
+      }, 3000)
+    } else {
+      console.log(resposta)
+        throw ("Houve um erro ao tentar realizar o cadastro!");
+    }
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+return false;
 }
 
+
 function verResultado() {
-  window.location = "../homeLogin.html";
+  window.location = "../ranking.html";
 }

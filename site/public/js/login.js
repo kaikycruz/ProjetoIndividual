@@ -49,7 +49,7 @@ function entrar() {
 
           sessionStorage.EMAIL_USUARIO = json.Email;
           sessionStorage.NOME_USUARIO = json.Nome;
-          sessionStorage.ID_USUARIO = json.id;
+          sessionStorage.ID_USUARIO = json.idUser;
 
           CampoSuccess.classList.remove("none");
           setTimeout(() => {

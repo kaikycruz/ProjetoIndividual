@@ -49,12 +49,29 @@ create table usuario (
  (null, 'ja estou no Manga!');
  
  
+ create table resultadosQuiz (
+ idQuiz int primary key auto_increment,
+ pontuacao int,
+ fkUser int,
+ foreign key (fkUser) references usuario(idUser)
+ );
  
+ select * from resultadosQuiz;
  
+ drop table resultadosQuiz;
  desc usuario;
 
+select * from personagem;
 select * from usuario;
 select * from epsAssistidos;
 
+
+select nome, pontuacao from resultadosQuiz join usuario on fkUser = idUser order by  pontuacao  desc;
+
+
 select count(usuario.fkPersonagem) as PersonagemFavorito , personagem.nomePersonagem as NomePersonagem   
         from usuario join personagem on fkPersonagem = idPersonagem group by nomePersonagem;
+
+
+select count(usuario.fkEps) as EpsAssistidos, epsassistidos.qtdEps as QuantidadeEps
+    from usuario join epsassistidos on fkEps = idEps group by qtdEps;

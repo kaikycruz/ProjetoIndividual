@@ -62,6 +62,51 @@ function entrar(req, res) {
   }
 }
 
+function listarPontos(req, res) {
+  usuarioModel.listarPontos()
+      .then(function (resultado) {
+          if (resultado.length > 0) {
+              res.status(200).json(resultado);
+          } else {
+              res.status(204).send("Nenhum resultado encontrado!")
+          }
+      }).catch(
+          function (erro) {
+              console.log(erro);
+              console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+              res.status(500).json(erro.sqlMessage);
+          }
+      );
+}
+
+function quiz(req, res) {
+  var idUsuario = req.body.idUsuarioServer;
+  var pontuacao = req.body.pontuacaoServer;
+
+  if (idUsuario == undefined) {
+    res.status(400).send("Seu idUsuario está undefined!");
+  } else if (pontuacao == undefined) {
+    res.status(400).send("Sua pontuacao está indefinida!");
+  } else {
+    usuarioModel
+      .quiz(idUsuario, pontuacao)
+      .then(function (resultado) {
+        res.status(204).send("pontuacao enviada")
+        console.log(`\nResultados encontrados: ${resultado}`);
+        console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+
+      })
+      .catch(function (erro) {
+        console.log(erro);
+        console.log(
+          "\nHouve um erro ao realizar o login! Erro: ",
+          erro.sqlMessage
+        );
+        res.status(500).json(erro.sqlMessage);
+      });
+  }
+}
+
 function cadastrar(req, res) {
   // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
   var nome = req.body.nomeServer;
@@ -108,6 +153,8 @@ function cadastrar(req, res) {
 module.exports = {
   entrar,
   cadastrar,
+  quiz,
+  listarPontos,
   listar,
   testar,
 };

@@ -25,6 +25,15 @@
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      href="//cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css"
+      rel="stylesheet"
+    />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+
+    <script src="./js/funcoes.js"></script>
   </head>
   <body onload="validarSessao()">
     <div class="main">
@@ -34,7 +43,7 @@
             <div class="navegation">
               <li><a href="./homeLogin.html">Home</a></li>
               <li><a href="./personagensLogin.html">Personagens</a></li>
-              <li><a href="./dashOne.html">Dashboard</a></li>
+
               <li><a href="./quiz.html" class="active">Quiz</a></li>
               <li><a href="./sobremimLogin.html">Sobre Mim</a></li>
             </div>
@@ -44,7 +53,7 @@
                   class="fa-solid fa-circle-user fa-xl"
                   style="color: #b4b2b2"
                 ></i>
-                <a href="./pageUser.html">Área do Usuário</a>
+                <a href="./dashOne.html">Área do Usuário</a>
               </li>
               <li class="out">
                 <button class="btn-logout" onclick="limparSessao()">
