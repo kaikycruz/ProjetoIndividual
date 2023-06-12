@@ -53,7 +53,7 @@ function plotarGraficoPersonagem(resposta, idPersonagem) {
         tension: 0.1,
       },
       {
-        label: "",
+        label: "votos",
         data: [],
         fill: false,
         backgroundColor: [
@@ -100,11 +100,18 @@ function plotarGraficoPersonagem(resposta, idPersonagem) {
   const config = {
     type: "bar",
     data: dados,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
   };
 
   let myChart = new Chart(document.getElementById(`myChart1`), config);
   setTimeout(
-    () => atualizarGraficoPersonagem(idPersonagem, dados, myChart1),
+    () => atualizarGraficoPersonagem(idPersonagem, dados, myChart),
     2000
   );
 }

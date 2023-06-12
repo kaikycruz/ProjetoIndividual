@@ -19,7 +19,7 @@ function updatePontos() {
                     var tdNome = document.createElement("td");
                     var tdpontuacao = document.createElement("td");
                     var tableTr = document.createElement("tr");
-                    var hr = document.createElement("hr");
+                    
 
                     tdNome.className = "text"
                     tdpontuacao.className = "text"
@@ -39,7 +39,7 @@ function updatePontos() {
                 // finalizarAguardar();
             });
         } else {
-            swal("Ops", "Houve um erro na API!", "warning");
+            alert("falha na API")
         }
     }).catch(function (resposta) {
         console.error(resposta);

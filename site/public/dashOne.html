@@ -40,7 +40,8 @@
             <li><a href="./homeLogin.html">Home</a></li>
             <li><a href="./personagensLogin.html">Personagens</a></li>
             <li><a href="./quiz.html">Quiz</a></li>
-            <li><a href="#ranking">Resultados Quiz</a></li>
+            <li><a href="./ranking.html">Resultados Quiz</a></li>
+            <li><a href="./dashOne.html" class="active">Gráficos gerais</a></li>
             <li><a href="./sobremimLogin.html">Sobre Mim</a></li>
           </div>
           <div class="in-up">
@@ -59,44 +60,33 @@
       </nav>
     </header>
     <section id="graficos">
-      <h1>One Piece - Fans Stats</h1>
+      <div class="container">
+        <h1>One Piece - Fans Stats</h1>
 
-      <div class="hello">
-        <h3>Olá,<span id="b_usuario">usuario</span>!</h3>
-      </div>
-
-      <div class="dash">
-        <div class="grafico1">
-          <canvas id="myChart1"></canvas>
+        <div class="hello">
+          <h3>Olá,<span id="b_usuario" class="destaque">usuario</span>!</h3>
+          <span style="color: #fff"
+            >Nesta Página você pode analisar quais são os personagens favoritos
+            <br />
+            dos outros tripulantes cadastrados no site e também em qual parte do
+            <br />
+            anime ou manga eles estão</span
+          >
         </div>
-        <div class="grafico2">
-          <canvas id="myEps"></canvas>
+
+        <div class="dash">
+          <div class="grafico1">
+            <h3>Personagens Favoritos dos Fans</h3>
+            <canvas id="myChart1"></canvas>
+          </div>
+          <div class="grafico2">
+            <h3>Quantidade de episódios vistos pelos Fans</h3>
+            <canvas id="myEps"></canvas>
+          </div>
         </div>
       </div>
     </section>
-    <section id="ranking">
-      <table
-        class="bordered, striped e centered highlight e responsive-table"
-        id="infos"
-        width="467"
-        border="1px"
-        bgcolor="transparent"
-        border-spacing:10px
-        30px
-      >
-        <div class="table-titulo">
-          <h1>Pontuação Geral</h1>
-        </div>
-        <thead>
-          <tr class="title">
-            <th width="10%">Jogador</th>
-            <th width="10%">Pontuação</th>
-          </tr>
-        </thead>
-      </table>
-    </section>
 
-    <script src="./js/pontos.js"></script>
     <script src="./js/graficoPersonagem.js"></script>
     <script src="./js/graficoEps.js"></script>
   </body>

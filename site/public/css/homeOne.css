@@ -174,7 +174,7 @@ li a {
 
 .tripulacao img {
   border-radius: 20%;
-  box-shadow: 10px 9px 10px #2e2e2e;
+  box-shadow: 0px 0px 10px #2e2e2e;
   height: 60vh;
   width: 45vw;
   margin-top: 5%;
@@ -182,14 +182,13 @@ li a {
 
 .intro {
   display: flex;
-  height: 100vh;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 5%;
   padding-right: 5%;
 }
 
-.carrossel {
+/* .carrossel {
   background: #000;
   height: 100vh;
 }
@@ -246,4 +245,4 @@ li a {
 .button:active {
   box-shadow: inset -4px 4px 0 #222;
   font-size: 0.9rem;
-}
+} */

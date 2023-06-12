@@ -50,18 +50,14 @@ function plotarGraficoEps(resposta, idEps) {
         tension: 0.1,
       },
       {
-        label: "Eps assistidos",
+        label: "votos",
         data: [],
         fill: false,
         backgroundColor: [
-          "#e64c4c", //luffy
-          "#a56dda", //zoro
-          "#fff046", //sanji
-          "orange", // nami
-          "#52d9ff",
-          "#f7a24e",
-          "#cf6ef0",
-          "#e6c149",
+          "#4783d3", //menos 200
+          "#e64c4c", // manga
+          "#fff046", //semanais
+          "#cf64d3", // quase 800
         ],
         border: "none",
         tension: 0.1,
@@ -77,8 +73,15 @@ function plotarGraficoEps(resposta, idEps) {
   }
 
   const config2 = {
-    type: "line",
+    type: "bar",
     data: dados2,
+    options: {
+      plugins: {
+        legend: {
+          display: false,
+        }
+      }
+    }
   };
 
   let myChart = new Chart(document.getElementById(`myEps`), config2);

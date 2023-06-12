@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - One Piece</title>
-    <link rel="stylesheet" href="./css/dashOne.css" />
+    <title>Resultados Quiz - One Piece</title>
+    <link rel="stylesheet" href="./css/ranking.css" />
     <script src="./js/funcoes.js"></script>
     <link
       rel="stylesheet"
@@ -38,8 +38,9 @@
           <div class="navegation">
             <li><a href="./homeLogin.html">Home</a></li>
             <li><a href="./personagensLogin.html">Personagens</a></li>
-
             <li><a href="./quiz.html">Quiz</a></li>
+            <li><a href="./ranking.html" class="active">Resultados Quiz</a></li>
+            <li><a href="./dashOne.html">Gráficos gerais</a></li>
             <li><a href="./sobremimLogin.html">Sobre Mim</a></li>
           </div>
           <div class="in-up">
@@ -58,31 +59,40 @@
       </nav>
     </header>
     <h1>One Piece - Resultados do Quiz</h1>
-
     <div class="hello">
-      <h3>Olá,<span id="b_usuario">usuario</span>!</h3>
+      <h3>
+        Olá participante
+        <span id="b_usuario" class="destaque"></span>!
+      </h3>
+      <span style="color: #fff"
+        >Nesta página você poderá ver quem está participando <br />do quiz e ver
+        suas pontuações</span
+      >
     </div>
 
-    <table
-      class="bordered, striped e centered highlight e responsive-table"
-      id="infos"
-      width="467"
-      border="1px"
-      bgcolor="transparent"
-      border-spacing:10px
-      30px
-    >
+    <div class="container">
       <div class="table-titulo">
         <h1>Pontuação Geral</h1>
       </div>
-      <thead>
-        <tr class="title">
-          <th width="10%">Jogador</th>
-          <th width="10%">Pontuação</th>
-        </tr>
-      </thead>
-    </table>
-
+      <div class="tabela">
+        <table
+          class="bordered, striped e centered highlight e responsive-table"
+          id="infos"
+          width="900"
+          border="1px"
+          bgcolor="#fff"
+          border-spacing:10px
+          30px
+        >
+          <thead>
+            <tr class="title">
+              <th width="10%">Jogador</th>
+              <th width="10%">Pontuação</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
     <script src="./js/pontos.js"></script>
   </body>
 </html>
